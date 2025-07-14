@@ -1,17 +1,46 @@
 import { useState } from "react";
-
 import Header from "../../components/common/header";
 import Footer from "../../components/common/footer";
 import { Filter, ChevronDown, ChevronUp, Search, X } from "lucide-react";
 
-import Image from "../../assets/first.jpg";
+import StudentOne from "../../assets/Student-1.png";
+import StudentTwo from "../../assets/Student-2.jpg";
+import StudentThree from "../../assets/Student-3.jpg";
+
+import img1 from "../../assets/img-1.jpg";
+import img2 from "../../assets/img-2.jpg";
+import img3 from "../../assets/img-3.jpg";
+import img4 from "../../assets/img-4.jpg";
+import img5 from "../../assets/img-5.jpg";
+import img6 from "../../assets/img-6.jpg";
+import img7 from "../../assets/img-7.jpg";
+import img8 from "../../assets/img-8.jpg";
+
+import BroadFashionLogo from "../../assets/BroadFashion-Logo.jpg";
+import PashupatiEcommerceLogo from "../../assets/PashupatiEcommerce-Logo.jpg";
+import SanamChaudhary from "../../assets/SanamChaudhary-logo.jpg";
+import SastoMartLogo from "../../assets/SastoMart-Logo.jpg";
+import SoftwareLogo from "../../assets/Software-Logo.jpg";
+import Tcompany from "../../assets/TCompany-Logo.jpg";
+import EsewaLogo from "../../assets/Esewa-logo.jpg";
+import KhalitLogo from "../../assets/Khalti-Logo.jpg";
+import PhonePay from "../../assets/PhonePay-Logo.jpg";
+import IMELogo from "../../assets/IME-Logo.jpg";
+
+const hiringPartners = [
+  { id: 1, image: BroadFashionLogo, name: "Broad Fashion" },
+  { id: 2, image: PashupatiEcommerceLogo, name: "Pashupati Ecommerce" },
+  { id: 3, image: SanamChaudhary, name: "Sanam Chaudhary" },
+  { id: 4, image: SastoMartLogo, name: "Sasto Mart" },
+  { id: 5, image: SoftwareLogo, name: "Software Company" },
+  { id: 6, image: Tcompany, name: "T Company" },
+  { id: 7, image: EsewaLogo, name: "Esewa" },
+  { id: 8, image: KhalitLogo, name: "Khalti" },
+  { id: 9, image: PhonePay, name: "PhonePay" },
+  { id: 10, image: IMELogo, name: "IME Pay" },
+];
 
 export default function Gallery() {
-  const allItems = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    name: "Pathau",
-  }));
-
   const students = [
     {
       id: 1,
@@ -21,7 +50,7 @@ export default function Gallery() {
       companyUrl: "https://hometechnepal.com",
       college: "St. Xavier's College",
       degree: "BBS",
-      image: `${Image}`,
+      image: `${img1}`,
       role: "Digital Marketing Associate",
       companyName: "Home Tech Nepal",
     },
@@ -33,7 +62,7 @@ export default function Gallery() {
       companyUrl: "https://dishhome.com.np",
       college: "IIMS College",
       degree: "Computer network and security",
-      image: `${Image}`,
+      image: `${img2}`,
       role: "NOC Engineer",
       companyName: "DishHome Nepal",
     },
@@ -45,7 +74,7 @@ export default function Gallery() {
       companyUrl: "https://anscreation.com",
       college: "Lumbini Engineering College",
       degree: "Computer Science",
-      image: `${Image}`,
+      image: `${img3}`,
       role: "Graphics Designer",
       companyName: "ANS Creation Pvt. Ltd.",
     },
@@ -57,7 +86,7 @@ export default function Gallery() {
       companyUrl: "https://istemlab.com",
       college: "Nagarjuna College of Information Technology",
       degree: "BCA",
-      image: `${Image}`,
+      image: `${img4}`,
       role: "Devops Engineer",
       companyName: "I.STEM LAB Pvt. Ltd.",
     },
@@ -69,7 +98,7 @@ export default function Gallery() {
       companyUrl: "https://broadwayinfosys.com",
       college: "Herald College",
       degree: "MBA",
-      image: `${Image}`,
+      image: `${img5}`,
       role: "Digital Marketing Associates",
       companyName: "Broadway Infosys Pvt. Ltd.",
     },
@@ -81,7 +110,7 @@ export default function Gallery() {
       companyUrl: "https://clickpoint.com",
       college: "Saraswati Multiple Campus",
       degree: "Management",
-      image: `${Image}`,
+      image: `${img6}`,
       role: "Digital Marketer",
       companyName: "Click Point Innovations Pvt. Ltd.",
     },
@@ -93,7 +122,7 @@ export default function Gallery() {
       companyUrl: "https://educationmigration.com",
       college: "Citizen College",
       degree: "BBA",
-      image: `${Image}`,
+      image: `${img7}`,
       role: "Jr. Accountant",
       companyName: "Education and Migration Corner Pvt. Ltd.",
     },
@@ -105,7 +134,7 @@ export default function Gallery() {
       companyUrl: "https://geetaaviation.com",
       college: "Goldengate International College",
       degree: "Management",
-      image: `${Image}`,
+      image: `${img8}`,
       role: "Digital Marketer",
       companyName: "Geeta Aviation",
     },
@@ -165,7 +194,6 @@ export default function Gallery() {
     ],
   };
 
-  const [currentPage, setCurrentPage] = useState(1);
   const [showFilter, setShowFilter] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedFilters, setSelectedFilters] = useState({
@@ -179,17 +207,20 @@ export default function Gallery() {
     roles: true,
   });
 
-  const itemsPerPage = 6;
+  const [hiringPartnersPage, setHiringPartnersPage] = useState(1);
+  const hiringPartnersPerPage = 6;
+  const hiringPartnersTotalPages = Math.ceil(
+    hiringPartners.length / hiringPartnersPerPage
+  );
+  const hiringPartnersStartIndex =
+    (hiringPartnersPage - 1) * hiringPartnersPerPage;
+  const currentHiringPartners = hiringPartners.slice(
+    hiringPartnersStartIndex,
+    hiringPartnersStartIndex + hiringPartnersPerPage
+  );
 
-  const totalPages = Math.ceil(allItems.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentItems = allItems.slice(startIndex, startIndex + itemsPerPage);
-
-  // ==============================================
-  // Utility Functions
-  // ==============================================
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
+  const handleHiringPartnersPageChange = (page) => {
+    setHiringPartnersPage(page);
   };
 
   const toggleSection = (section) => {
@@ -223,18 +254,13 @@ export default function Gallery() {
     selectedFilters.roles.length > 0 ||
     searchQuery.length > 0;
 
-  // ==============================================
-  // Filter Logic
-  // ==============================================
   const filteredStudents = students.filter((student) => {
-    // Search filter
     const searchMatch =
       searchQuery === "" ||
       student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       student.position.toLowerCase().includes(searchQuery.toLowerCase()) ||
       student.companyName.toLowerCase().includes(searchQuery.toLowerCase());
 
-    // Category filters
     const collegeMatch =
       selectedFilters.colleges.length === 0 ||
       selectedFilters.colleges.includes(student.college);
@@ -248,9 +274,6 @@ export default function Gallery() {
     return searchMatch && collegeMatch && companyMatch && roleMatch;
   });
 
-  // ==============================================
-  // UI Components
-  // ==============================================
   return (
     <>
       <Header />
@@ -259,52 +282,48 @@ export default function Gallery() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6 -mt-30">
               <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-                Meet our <span className="text-blue-600">students</span>
+                Empowering Our <span className="text-blue-600">Graduates</span>
               </h1>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-700">
-                Read their{" "}
-                <span className="text-orange-600">success stories</span>
+                Inspiring{" "}
+                <span className="text-orange-600">Career Journeys</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-lg">
-                Discover how our students transformed their careers through our
-                programs.
+                Explore the real-world success stories of our students who
+                turned their skills into thriving careers across top companies
+                in Nepal and beyond.
               </p>
             </div>
 
-            <div className="relative w-full h-96 md:h-[32rem] rounded-3xl backdrop-blur-sm border border-white/30 shadow-xl ml-30 -mt-20">
-              {/* Main container with responsive sizing */}
+            <div className="relative w-full h-96 md:h-[32rem] rounded-3xl backdrop-blur-sm ml-30 -mt-20">
               <div className="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-4 p-4">
-                {/* Top-right image */}
                 <div className="row-start-1">
                   <img
-                    src={`${Image}`}
+                    src={StudentOne}
                     alt="Student"
-                    className="w-45 h-50 mt-20 rounded object-cover"
+                    className="w-full max-w-[120px] md:max-w-[160px] mt-10 md:mt-20 rounded object-cover aspect-square ml-5"
                   />
                 </div>
 
-                {/* Middle-left image */}
                 <div className="col-start-2 row-start-2 -mt-50 rounded overflow-hidden">
                   <img
-                    src={`${Image}`}
+                    src={StudentTwo}
                     alt="Student"
-                    className="w-46 h-45 rounded object-cover"
+                    className="w-full max-w-[120px] md:max-w-[160px] mt-10 md:mt-20 rounded object-cover aspect-square"
                   />
                 </div>
 
-                {/* Bottom-center image */}
-                <div className="col-start-2 row-start-3 rounded overflow-hidden -mt-40">
+                <div className="col-start-2 row-start-3 rounded overflow-hidden -mt-50">
                   <img
-                    src={`${Image}`}
+                    src={StudentThree}
                     alt="Student"
-                    className="w-50 h-50 object-cover"
+                    className="w-full max-w-[120px] md:max-w-[160px] mt-10 md:mt-20 rounded object-cover aspect-square"
                   />
                 </div>
 
-                {/* "Recently Hired by" Card */}
                 <div className="absolute z-30 bg-white/90 p-4 rounded-2xl shadow-xl flex items-center space-x-3 backdrop-blur-sm border border-white/20 -ml-30 mt-55">
                   <img
-                    src={`${Image}`}
+                    src={`${StudentThree}`}
                     alt="Company Logo"
                     className="rounded-lg w-12 h-12 md:w-16 md:h-16 object-contain"
                   />
@@ -322,20 +341,27 @@ export default function Gallery() {
           </div>
         </div>
       </div>
+
+      {/* Hiring Partners Section */}
       <div className="bg-blue-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             Our Hiring Partners
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {currentItems.map((item) => (
-              <div key={item.id} className="bg-white p-4 rounded-lg shadow-md">
+            {currentHiringPartners.map((partner) => (
+              <div
+                key={partner.id}
+                className="rounded-lg hover:shadow-lg transition-shadow w-full"
+              >
                 <img
-                  src={`${Image}`}
-                  alt={item.name}
-                  className="w-20 h-20 object-contain"
+                  src={partner.image}
+                  alt={partner.name}
+                  className="w-40 h-25 object-contain mx-auto"
                 />
-                <p className="mt-2 text-center text-gray-600">{item.name}</p>
+                <p className="mt-2 text-center text-gray-600 font-medium">
+                  {partner.name}
+                </p>
               </div>
             ))}
           </div>
@@ -343,19 +369,21 @@ export default function Gallery() {
           {/* Pagination Controls */}
           <div className="flex justify-center items-center mt-12 space-x-2">
             <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
+              onClick={() =>
+                handleHiringPartnersPageChange(hiringPartnersPage - 1)
+              }
+              disabled={hiringPartnersPage === 1}
               className="px-4 py-2 rounded-md bg-gray-200 text-gray-700 disabled:opacity-50 hover:bg-gray-300 transition-colors"
             >
               Previous
             </button>
 
-            {Array.from({ length: totalPages }, (_, i) => (
+            {Array.from({ length: hiringPartnersTotalPages }, (_, i) => (
               <button
                 key={i + 1}
-                onClick={() => handlePageChange(i + 1)}
+                onClick={() => handleHiringPartnersPageChange(i + 1)}
                 className={`w-10 h-10 rounded-full ${
-                  currentPage === i + 1
+                  hiringPartnersPage === i + 1
                     ? "bg-blue-600 text-white"
                     : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                 } transition-colors`}
@@ -365,8 +393,10 @@ export default function Gallery() {
             ))}
 
             <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
+              onClick={() =>
+                handleHiringPartnersPageChange(hiringPartnersPage + 1)
+              }
+              disabled={hiringPartnersPage === hiringPartnersTotalPages}
               className="px-4 py-2 rounded-md bg-gray-200 text-gray-700 disabled:opacity-50 hover:bg-gray-300 transition-colors"
             >
               Next

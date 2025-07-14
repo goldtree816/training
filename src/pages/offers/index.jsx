@@ -1,6 +1,6 @@
 import { ArrowRight, Calendar, Phone, Percent, Book } from "lucide-react";
 
-import HeroImage from "../../assets/Hero.png";
+import HeroImage from "../../assets/HeroImage.png";
 
 export default function Offer() {
   return (
@@ -8,7 +8,7 @@ export default function Offer() {
       <div className="bg-gradient-to-r from-red-300 to-orange-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="-mt-10">
+            <div className="mt-10">
               <h2 className="text-gray-700 font-medium text-xl mb-4">
                 18% OFF FOR +2 APPEARED STUDENTS
               </h2>
@@ -43,7 +43,7 @@ export default function Offer() {
               </div>
             </div>
 
-            <div className="hidden lg:block -mt-5">
+            <div className="hidden lg:block -mt-20">
               <img
                 src={HeroImage}
                 width={400}
@@ -61,36 +61,64 @@ export default function Offer() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <h2 className="text-gray-800 text-2xl font-semibold mb-6">
-                Exclusively for +2 appeared Students 2082: Get an 18% discount
-                on any course you want to enroll and unlock endless
-                possibilities.
+                Launch Your Tech Career Now: 18% Exclusive Discount for +2
+                Graduates (2082 Batch)
               </h2>
 
               <p className="text-gray-700 mb-4">
-                GoldTree Group extends warm congratulations to all students who
-                appeared in the 2082 +2 examinations. We are excited to offer{" "}
+                Congratulations on completing your +2 journey! At GoldTree
+                Group, we're empowering Nepal's next generation of tech leaders
+                with our{" "}
                 <span className="font-semibold">
-                  exclusive IT training opportunities
-                </span>{" "}
-                fro students ready to shape their future in the dynamic world of
-                Information Technology. We are running a{" "}
-                <span className="font-semibold">
-                  special 18% discount offer
+                  industry-aligned IT training programs
                 </span>
-                for +2 appeared students (2082 batch).
+                . As you take this pivotal step toward your future, we're
+                offering an{" "}
+                <span className="font-semibold">exclusive 18% discount</span> to
+                help you gain cutting-edge skills that employers actually value.
               </p>
 
               <p className="text-gray-700 mb-4">
-                Alongside expert-led training, we also provide{" "}
-                <span className="fot-semibold">career counseling</span>
-                to help you choose the right IT path for your goals.
+                Our{" "}
+                <span className="font-semibold">
+                  project-based learning approach
+                </span>{" "}
+                gives you real-world experience in:
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Full-stack web development</li>
+                  <li>Mobile app creation</li>
+                  <li>Cloud computing fundamentals</li>
+                  <li>Data science essentials</li>
+                </ul>
+              </p>
+
+              <p className="text-gray-700 mb-4">
+                Beyond technical skills, you'll receive:
+                <span className="block mt-2">
+                  <span className="font-semibold">✓ Career mentorship</span>{" "}
+                  from industry experts
+                  <br />
+                  <span className="font-semibold">
+                    ✓ Portfolio development
+                  </span>{" "}
+                  to showcase your work
+                  <br />
+                  <span className="font-semibold">
+                    ✓ Job placement support
+                  </span>{" "}
+                  with our 200+ partner companies
+                </span>
               </p>
 
               <p className="text-gray-700 mb-6">
-                Don't wait: seize this opportunity today! To view more,
-                <a href="#" className="text-blue-600 hover:underline">
-                  Click Here
-                </a>
+                This limited-time offer expires soon.{" "}
+                <a
+                  href="#"
+                  className="text-blue-600 hover:underline font-medium"
+                >
+                  Schedule a free counseling session
+                </a>{" "}
+                to find your perfect career path in tech.
               </p>
             </div>
 
@@ -102,10 +130,13 @@ export default function Offer() {
                   </div>
                   <div>
                     <h3 className="text-gray-500 text-sm font-medium mb-1">
-                      CALL US TODAY
+                      LIMITED SEATS AVAILABLE
                     </h3>
                     <p className="text-gray-800 font-semibold text-lg">
-                      01-4111849/ 9841002000
+                      01-4111849 / 9841002000
+                    </p>
+                    <p className="text-sm text-gray-500 mt-1">
+                      Call now for priority enrollment
                     </p>
                   </div>
                 </div>
@@ -118,10 +149,10 @@ export default function Offer() {
                   </div>
                   <div>
                     <h3 className="text-gray-500 text-sm font-medium mb-1">
-                      OFFER
+                      EXCLUSIVE BENEFITS
                     </h3>
                     <p className="text-gray-800 font-semibold text-lg">
-                      18% OFF
+                      18% Discount + Free Career Kit
                     </p>
                   </div>
                 </div>
@@ -134,10 +165,11 @@ export default function Offer() {
                   </div>
                   <div>
                     <h3 className="text-gray-500 text-sm font-medium mb-1">
-                      COURSES
+                      TOP PROGRAMS
                     </h3>
                     <p className="text-gray-800 font-semibold text-lg">
-                      ALL COURSES
+                      Web Development • App Development • Data Science •
+                      Cybersecurity
                     </p>
                   </div>
                 </div>

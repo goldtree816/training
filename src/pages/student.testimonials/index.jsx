@@ -5,6 +5,8 @@ import {
   SquarePlay,
   Play,
   ChevronDown,
+  Star,
+  Quote,
 } from "lucide-react";
 
 import Header from "../../components/common/header";
@@ -16,147 +18,182 @@ const testimonials = [
   {
     id: 1,
     name: "Mr. Manish Chaudhary",
-    course:
-      "AI with Python: Machine Learning, Deep Learning & Generative AI (LLMs) Training",
+    course: "Advanced AI & Machine Learning with Python",
     image: `${Image}`,
     testimonial:
-      "I feel really positive about my teacher and Broadway Infosys. The instructors are knowledgeable, supportive, and genuinely care about students growth.",
+      "The AI course at Broadway Infosys transformed my career. The instructors' expertise and hands-on projects helped me master machine learning and LLMs, leading to a dream job in AI development.",
+    rating: 5,
+    date: "June 2023",
   },
   {
     id: 2,
     name: "Mr. Krishna Gaha",
-    course: "JAVA Training Package",
+    course: "Professional Java Developer Program",
     image: `${Image}`,
     testimonial:
-      "I received an excellent service from both teacher and institution as I expected. I will surely suggest my friends to become a part of this institution. Thank You!",
+      "Broadway Infosys provided an exceptional learning experience. The Java course was comprehensive, and the instructors' guidance made complex concepts easy to grasp. Highly recommend!",
+    rating: 4,
+    date: "May 2023",
   },
   {
     id: 3,
     name: "Ms. Pragya Sharad Khadka",
-    course: "Web Development With Python and Django",
+    course: "Full-Stack Web Development with Python & Django",
     image: `${Image}`,
     testimonial:
-      "Both the instructors who taught us were very professional. They had depth knowledge on their course content. Management team of Broadway Infosys was also very good.",
+      "The Python and Django course was a game-changer. The instructors were industry experts who provided real-world insights, and the management team ensured a seamless learning journey.",
+    rating: 5,
+    date: "July 2023",
   },
   {
     id: 4,
     name: "Ms. Rabina Kumari Chaudhary",
-    course: "Web Design Training in Nepal",
+    course: "UI/UX & Web Design Mastery",
     image: `${Image}`,
     testimonial:
-      "Our web design instructors leave a lifelong impression on their students. His passion for designing and his ability to explain difficult concepts with ease made a huge difference in my learning. He always believed in me...",
+      "The web design course ignited my passion for creating user-friendly interfaces. The instructor's enthusiasm and clear explanations made every session engaging and impactful.",
+    rating: 5,
+    date: "August 2023",
   },
   {
     id: 5,
     name: "Mr. Prakash Bahadur Kathayat",
-    course: "Data Science with Python Training",
+    course: "Data Science & Analytics with Python",
     image: `${Image}`,
     testimonial:
-      "I would like to express my gratitude for the opportunity to complete my Data Science with Python course at Broadway Infosys. The learning experience was highly beneficial, and I appreciate the structured curriculum...",
+      "The Data Science course was exceptionally well-structured. The hands-on projects and expert guidance helped me transition into a data analyst role with confidence.",
+    rating: 4,
+    date: "September 2023",
   },
   {
     id: 6,
     name: "Mr. Saphal Rai",
-    course: "Flutter Framework Training",
+    course: "Cross-Platform Mobile Development with Flutter",
     image: `${Image}`,
     testimonial:
-      "Our instructor was excellent in his teaching. I am grateful to have learned from him, as he has had a positive influence on my life. His instruction is especially effective because it is straightforward, conceptual...",
+      "Learning Flutter at Broadway Infosys was a fantastic experience. The instructor's clear, conceptual teaching style empowered me to build professional mobile apps.",
+    rating: 5,
+    date: "October 2023",
   },
   {
     id: 7,
     name: "Mr. Rejas Pandey",
-    course: "Accounting Training",
+    course: "Professional Accounting & Financial Analysis",
     image: `${Image}`,
     testimonial:
-      "The accounting course at Broadway Infosys, taught by our instructor, was exceptional. His clear explanations and in-depth knowledge made complex concepts simple to grasp. The institute provides a supportive and well-orga...",
+      "The accounting course was outstanding. The instructor's ability to simplify complex financial concepts and the supportive environment at Broadway Infosys made learning a joy.",
+    rating: 4,
+    date: "November 2023",
   },
   {
     id: 8,
     name: "Mr. Abhishek Mishra",
-    course: "Data Science with Python Training",
+    course: "Data Science & Machine Learning with Python",
     image: `${Image}`,
     testimonial:
-      "My teacher is a total pro, one of the best I've ever had. I came from a BBA in Banking and Insurance with zero coding skills, but he made Python and Data Science feel easy. He broke down tough problems into simple...",
+      "Coming from a non-technical background, I was amazed at how the instructor made Python and Data Science accessible. The course was a turning point in my career.",
+    rating: 5,
+    date: "December 2023",
   },
   {
     id: 9,
     name: "Ms. Sanglamu Sherpa",
-    course: "Web Design Training in Nepal",
+    course: "Advanced Web Design & User Experience",
     image: `${Image}`,
     testimonial:
-      "Our Web Design instructor was really good that I got all my confusion cleared. It was really worth taking web class from him and overall I found Broadway really good.",
+      "The web design course cleared all my doubts and boosted my confidence. The instructor's practical approach and the institute's resources were top-notch.",
+    rating: 4,
+    date: "January 2024",
   },
   {
     id: 10,
     name: "Mr. Santosh Kunwar",
-    course: "Graphics Design Training in Nepal",
+    course: "Professional Graphic Design with Adobe Suite",
     image: `${Image}`,
     testimonial:
-      "मैले ग्राफिक्स डिजाइनको अध्ययन गरेको छु। मेरो शिक्षकले मलाई धेरै राम्रो सिकाउनुभयो। उहाँले मलाई फोटोशप, इलस्ट्रेटर सिकाउनुभयो। I had the privilege of studying graph...",
+      "मैले ग्राफिक डिजाइन कोर्समा धेरै कुरा सिकें। शिक्षकको व्यावहारिक र स्पष्ट शिक्षणले मलाई फोटोशप र इलस्ट्रेटरमा निपुण बनायो। The course was a creative breakthrough for me.",
+    rating: 5,
+    date: "February 2024",
   },
   {
     id: 11,
     name: "Mr. Jaganath Raila",
-    course: "QA Training in Nepal",
+    course: "Quality Assurance & Software Testing",
     image: `${Image}`,
     testimonial:
-      "Our teacher is friendly, and he always encourages us to learn and create a friendly environment in class, which makes me more encouraged to learn in the Quality Assurance field. In Broadway Infosys, there is a suitable e...",
+      "The QA course was engaging and practical. The instructor fostered a supportive environment, making it easy to learn and excel in software testing.",
+    rating: 4,
+    date: "March 2024",
   },
   {
     id: 12,
     name: "Mr. Rimesh Chaudhary",
-    course: "Data Science with Python Training",
+    course: "Advanced Data Science with Python",
     image: `${Image}`,
     testimonial:
-      "Broadway Infosys helps me to dive into data science. Our instructor teaches us Python and Data science; that was the best experience with him.",
+      "Broadway Infosys opened the door to data science for me. The instructor's expertise and real-world projects made this one of the best learning experiences I've had.",
+    rating: 4,
+    date: "April 2024",
   },
   {
     id: 13,
     name: "Mr. Prajjwol Mani Bajracharya",
-    course: "Advanced React Web Development Training",
+    course: "Full-Stack React & Node.js Development",
     image: `${Image}`,
     testimonial:
-      "The course is well-structured and meets professional standards. It also demonstrates a high level of competence.",
+      "The React course was meticulously designed and delivered with professional excellence. It equipped me with the skills to build modern web applications.",
+    rating: 5,
+    date: "May 2024",
   },
   {
     id: 14,
     name: "Mr. Bidur Timsina",
-    course: "Data Science with Python Training",
+    course: "Data Science & AI with Python",
     image: `${Image}`,
     testimonial:
-      "The Data Science with Python course at Broadway Infosys has been a highly valuable learning experience. The instructor is knowledgeable, explains concepts clearly, and fosters an interactive and supportive classroom...",
+      "The Data Science course was a perfect blend of theory and practice. The instructor's clear explanations and interactive sessions made complex topics approachable.",
+    rating: 4,
+    date: "June 2024",
   },
   {
     id: 15,
     name: "Ms. Samikshya Rajthala",
-    course: "Graphics Design Training in Nepal",
+    course: "Advanced Graphic Design & Visual Communication",
     image: `${Image}`,
     testimonial:
-      "I took the Graphics Design course at Broadway Infosys. The training was intensive and well-organized. Our instructor was knowledgeable and supportive and gave us real-world project experience. The institute itself has ex...",
+      "The graphic design course was intensive and inspiring. The instructor's guidance and real-world projects helped me create a professional portfolio.",
+    rating: 5,
+    date: "July 2024",
   },
   {
     id: 16,
     name: "Mr. Sahadev Pandey",
-    course: "JAVA Training Package",
+    course: "Enterprise Java Development",
     image: `${Image}`,
     testimonial:
-      "My overall experience in Broadway Infosys has been very good. Instructors have been helpful and ready to solve our queries and always ready to guide and mentor. So, as a whole, both Broadway Infosys Nepal and Instru...",
+      "Broadway Infosys provided an exceptional Java learning experience. The instructors were always ready to mentor, making it a rewarding journey.",
+    rating: 4,
+    date: "August 2024",
   },
   {
     id: 17,
     name: "Ms. Raksha Khadka",
-    course: "Data Science with Python Training",
+    course: "Data Science & Machine Learning Mastery",
     image: `${Image}`,
     testimonial:
-      "With an insatiable appetite for learning data science, joining here with an excellent mentor was worth it. I am thrilled to have had the chance to experience a wonderful journey in data science.",
+      "Joining the Data Science course was a life-changing decision. The mentor's expertise and the institute's support made my learning journey truly remarkable.",
+    rating: 5,
+    date: "September 2024",
   },
   {
     id: 18,
     name: "Mr. Hemanta Rajbanshi",
-    course: "Data Science with Python Training",
+    course: "Data Science & Predictive Analytics",
     image: `${Image}`,
     testimonial:
-      "I feel our instructor are generally positive, highlighting their industry experience, practical teaching methods, and supportive attitude.",
+      "The instructors' industry experience and practical teaching methods made the Data Science course incredibly valuable. I feel confident in my new skills.",
+    rating: 4,
+    date: "October 2024",
   },
 ];
 
@@ -164,50 +201,90 @@ const videoTestimonials = [
   {
     id: 1,
     name: "Mr. Ashish Poudel",
-    course: "Web Design Training",
+    course: "Professional Web Design & UI/UX",
     thumbnail: `${Image}`,
     duration: "2:30",
+    views: "1.2K",
+    rating: 5,
+    date: "June 2023",
   },
   {
     id: 2,
     name: "Mr. Ruchi Raj Karki",
-    course: "MERN Stack Development Training",
+    course: "Full-Stack MERN Development",
     thumbnail: `${Image}`,
     duration: "3:15",
+    views: "2.5K",
+    rating: 4,
+    date: "July 2023",
   },
   {
     id: 3,
     name: "Mr. Sandesh Kharal",
-    course: "MERN Stack Development Training",
+    course: "Advanced MERN Stack Development",
     thumbnail: `${Image}`,
     duration: "2:45",
+    views: "1.8K",
+    rating: 4,
+    date: "August 2023",
   },
   {
     id: 4,
     name: "Mr. Subodh Parajuli",
-    course: "Digital Marketing 360°",
+    course: "Digital Marketing & SEO Mastery",
     thumbnail: `${Image}`,
     duration: "4:20",
+    views: "3.1K",
+    rating: 5,
+    date: "September 2023",
   },
   {
     id: 5,
     name: "Ms. Smriti Joshi",
-    course: "Data Science & ML with Python",
+    course: "Data Science & Machine Learning with Python",
     thumbnail: `${Image}`,
     duration: "3:30",
+    views: "2.0K",
+    rating: 4,
+    date: "October 2023",
   },
   {
     id: 6,
     name: "Ms. Chetana Nath",
-    course: "Graphics Design Training",
+    course: "Professional Graphic Design & Visual Arts",
     thumbnail: `${Image}`,
     duration: "2:55",
+    views: "1.5K",
+    rating: 5,
+    date: "November 2023",
   },
 ];
 
 export default function StudentTestimonials() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("text");
+  const [visibleTestimonials, setVisibleTestimonials] = useState(6);
+  const [visibleVideos, setVisibleVideos] = useState(6);
+
+  const loadMore = () => {
+    if (activeTab === "text") {
+      setVisibleTestimonials((prev) => prev + 6);
+    } else {
+      setVisibleVideos((prev) => prev + 6);
+    }
+  };
+
+  const filteredTestimonials = testimonials.filter(
+    (testimonial) =>
+      testimonial.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      testimonial.course.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const filteredVideos = videoTestimonials.filter(
+    (video) =>
+      video.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      video.course.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <>
@@ -224,127 +301,73 @@ export default function StudentTestimonials() {
               <h2 className="text-4xl font-bold mb-6">
                 for their <span className="text-orange-600">learning</span>
               </h2>
-              <p className="text-black-100 mb-8">
-                Real stories, real results. Our students expressing their words
-                and voices.
+              <p className="text-gray-800 mb-8">
+                Real stories, real results. Our students share their
+                transformative learning experiences.
               </p>
               <button className="bg-blue-600 gap-2 hover:bg-blue-700 text-white px-6 py-3 rounded-md flex items-center transition-colors">
-                Read more testimonials <ArrowDown className="w-5 h-5" />
+                Explore Testimonials <ArrowDown className="w-5 h-5" />
               </button>
             </div>
 
             {/* Right side - Testimonial cards in 2x2 grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {/* First testimonial card */}
-              <div className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-orange-500">
-                <div className="text-orange-500 text-2xl mb-2">"</div>
-                <p className="text-gray-700 text-sm mb-3">
-                  Our Python and Django Instructor is the great instructor. With
-                  the help of our instructor, I was able to solve my unsolved
-                  queries.
-                </p>
-                <a href="#" className="text-blue-600 text-sm hover:underline">
-                  Read more
-                </a>
-                <div className="flex items-center mt-3">
-                  <img
-                    src={Image}
-                    alt="Student"
-                    className="w-8 h-8 rounded-full mr-3"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-sm">
-                      Ms. Ankita Thapa Magar
-                    </h4>
-                    <p className="text-xs text-gray-600">
-                      Web Development With Python and Django
+              {testimonials.slice(0, 4).map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-orange-500 hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="flex items-start mb-4">
+                    <Quote className="text-orange-500 w-6 h-6 mt-1 mr-2" />
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      {testimonial.testimonial.length > 100
+                        ? `${testimonial.testimonial.substring(0, 100)}...`
+                        : testimonial.testimonial}
                     </p>
                   </div>
-                </div>
-              </div>
-
-              {/* Second testimonial card */}
-              <div className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-orange-500">
-                <div className="text-orange-500 text-2xl mb-2">"</div>
-                <p className="text-gray-700 text-sm mb-3">
-                  Our instructor is really polite and kind. They also have an
-                  excellent way of teaching the students, really impressed by
-                  his teaching style.
-                </p>
-                <a href="#" className="text-blue-600 text-sm hover:underline">
-                  Read more
-                </a>
-                <div className="flex items-center mt-3">
-                  <img
-                    src={Image}
-                    alt="Student"
-                    className="w-8 h-8 rounded-full mr-3"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-sm">
-                      Mr. Suyash Acharya
-                    </h4>
-                    <p className="text-xs text-gray-600">
-                      Web Design Training in Nepal
-                    </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <img
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        className="w-8 h-8 rounded-full mr-3 object-cover"
+                      />
+                      <div>
+                        <h4 className="font-semibold text-sm">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-xs text-gray-600">
+                          {testimonial.course}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <div className="flex">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className={`w-3 h-3 ${
+                              i < testimonial.rating
+                                ? "text-yellow-400 fill-current"
+                                : "text-gray-300"
+                            }`}
+                          />
+                        ))}
+                      </div>
+                      <span className="text-xs text-gray-500">
+                        {testimonial.date}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Third testimonial card */}
-              <div className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-orange-500">
-                <div className="text-orange-500 text-2xl mb-2">"</div>
-                <p className="text-gray-700 text-sm mb-3">
-                  The course materials were comprehensive and the instructor was
-                  always available to help with any questions I had.
-                </p>
-                <a href="#" className="text-blue-600 text-sm hover:underline">
-                  Read more
-                </a>
-                <div className="flex items-center mt-3">
-                  <img
-                    src={Image}
-                    alt="Student"
-                    className="w-8 h-8 rounded-full mr-3"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-sm">Mr. Rajesh Sharma</h4>
-                    <p className="text-xs text-gray-600">Data Science Course</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Fourth testimonial card */}
-              <div className="bg-white rounded-lg shadow-lg p-4 border-l-4 border-orange-500">
-                <div className="text-orange-500 text-2xl mb-2">"</div>
-                <p className="text-gray-700 text-sm mb-3">
-                  I landed my dream job just 2 months after completing this
-                  course. The career support was exceptional.
-                </p>
-                <a href="#" className="text-blue-600 text-sm hover:underline">
-                  Read more
-                </a>
-                <div className="flex items-center mt-3">
-                  <img
-                    src={Image}
-                    alt="Student"
-                    className="w-8 h-8 rounded-full mr-3"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-sm">Ms. Priya Patel</h4>
-                    <p className="text-xs text-gray-600">
-                      Digital Marketing Program
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
       <div className="py-16 bg-white">
-        <div className="max-w-2-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-6">
               Search Student/Course to see what our students say about it
@@ -354,7 +377,7 @@ export default function StudentTestimonials() {
             <div className="relative max-w-md mx-auto mb-6">
               <input
                 type="text"
-                placeholder="Student/Course"
+                placeholder="Search by student or course..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-4 py-3 pr-12 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -395,44 +418,64 @@ export default function StudentTestimonials() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               {activeTab === "text" && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {testimonials.map((testimonial) => (
-                    <div
-                      key={testimonial.id}
-                      className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
-                    >
-                      <div className="flex items-center mb-4">
-                        <img
-                          src={testimonial.image || "/placeholder.svg"}
-                          alt={testimonial.name}
-                          className="w-12 h-12 rounded-full mr-4 object-cover"
-                        />
-                        <div>
-                          <h3 className="font-semibold text-gray-800 text-sm">
-                            {testimonial.name}
-                          </h3>
-                          <p className="text-blue-600 text-xs">
-                            {testimonial.course}
+                  {filteredTestimonials
+                    .slice(0, visibleTestimonials)
+                    .map((testimonial) => (
+                      <div
+                        key={testimonial.id}
+                        className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                      >
+                        <div className="flex items-center mb-4">
+                          <img
+                            src={testimonial.image || "/placeholder.svg"}
+                            alt={testimonial.name}
+                            className="w-12 h-12 rounded-full mr-4 object-cover"
+                          />
+                          <div>
+                            <h3 className="font-semibold text-gray-800 text-sm">
+                              {testimonial.name} (ID: {testimonial.id})
+                            </h3>
+                            <p className="text-blue-600 text-xs">
+                              {testimonial.course}
+                            </p>
+                            <div className="flex mt-1">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-3 h-3 ${
+                                    i < testimonial.rating
+                                      ? "text-yellow-400 fill-current"
+                                      : "text-gray-300"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                            <span className="text-xs text-gray-500">
+                              {testimonial.date}
+                            </span>
+                          </div>
+                        </div>
+                        <div className="flex items-start mb-4">
+                          <Quote className="text-orange-500 w-6 h-6 mt-1 mr-2" />
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {testimonial.testimonial}
                           </p>
                         </div>
+                        <a
+                          href="#"
+                          className="text-blue-600 text-sm hover:underline"
+                        >
+                          Read more
+                        </a>
                       </div>
-                      <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                        {testimonial.testimonial}
-                      </p>
-                      <a
-                        href="#"
-                        className="text-blue-600 text-sm hover:underline"
-                      >
-                        Read more
-                      </a>
-                    </div>
-                  ))}
+                    ))}
                 </div>
               )}
 
               {/* Video Testimonials Grid */}
               {activeTab === "video" && (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {videoTestimonials.map((video) => (
+                  {filteredVideos.slice(0, visibleVideos).map((video) => (
                     <div
                       key={video.id}
                       className="relative group cursor-pointer"
@@ -452,26 +495,43 @@ export default function StudentTestimonials() {
                           </div>
                         </div>
 
-                        {/* Duration */}
+                        {/* Duration and Views */}
                         <div className="absolute bottom-2 right-2 bg-black/50 text-white text-xs px-2 py-1 rounded">
-                          {video.duration}
+                          {video.duration} • {video.views} views
                         </div>
                       </div>
 
                       {/* Video Info */}
-                      <div className="mt-4 flex items-center">
-                        <img
-                          src={Image}
-                          alt={video.name}
-                          className="w-10 h-10 rounded-full mr-3"
-                        />
-                        <div>
-                          <h3 className="font-semibold text-gray-800 text-sm">
-                            {video.name}
-                          </h3>
-                          <p className="text-gray-600 text-xs">
-                            {video.course}
-                          </p>
+                      <div className="mt-4 flex items-center justify-between">
+                        <div className="flex items-center">
+                          <img
+                            src={video.thumbnail}
+                            alt={video.name}
+                            className="w-10 h-10 rounded-full mr-3 object-cover"
+                          />
+                          <div>
+                            <h3 className="font-semibold text-gray-800 text-sm">
+                              {video.name} (ID: {video.id})
+                            </h3>
+                            <p className="text-gray-600 text-xs">
+                              {video.course}
+                            </p>
+                            <div className="flex mt-1">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-3 h-3 ${
+                                    i < video.rating
+                                      ? "text-yellow-400 fill-current"
+                                      : "text-gray-300"
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                            <span className="text-xs text-gray-500">
+                              {video.date}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -480,7 +540,10 @@ export default function StudentTestimonials() {
               )}
 
               <div className="mt-12 flex justify-center">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md flex items-center transition-colors duration-300 font-medium">
+                <button
+                  onClick={loadMore}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-md flex items-center transition-colors duration-300 font-medium"
+                >
                   LOAD MORE
                   <ChevronDown className="ml-2 h-5 w-5" />
                 </button>
