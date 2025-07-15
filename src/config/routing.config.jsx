@@ -4,7 +4,7 @@ import HomeLayout from "../layout/home.layout";
 import Gallery from "../pages/gallery";
 import StudentTestimonials from "../pages/student.testimonials";
 import UpcomingClasses from "../pages/upcoming.classes";
-import Cardlink from "../pages/upcoming.classes/cardlink.jsx";
+import CourseDetails from "../pages/upcoming.classes/course.details.jsx";
 import CareerPage from "../pages/career";
 
 const RoutingConfig = () => {
@@ -16,7 +16,7 @@ const RoutingConfig = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/testimonials" element={<StudentTestimonials />} />
         <Route path="/upcoming_classes" element={<UpcomingClasses />} />
-        <Route path="/upcoming_classes/:classId" element={<Cardlink />} />
+        <Route path="/upcoming_classes/:classId" element={<CourseDetails />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/blog" element={<BlogSection />} />
       </Routes>

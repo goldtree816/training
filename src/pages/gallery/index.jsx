@@ -17,15 +17,15 @@ import img7 from "../../assets/img-7.jpg";
 import img8 from "../../assets/img-8.jpg";
 
 import BroadFashionLogo from "../../assets/BroadFashion-Logo.jpg";
-import PashupatiEcommerceLogo from "../../assets/PashupatiEcommerce-Logo.jpg";
-import SanamChaudhary from "../../assets/SanamChaudhary-logo.jpg";
-import SastoMartLogo from "../../assets/SastoMart-Logo.jpg";
-import SoftwareLogo from "../../assets/Software-Logo.jpg";
-import Tcompany from "../../assets/TCompany-Logo.jpg";
-import EsewaLogo from "../../assets/Esewa-logo.jpg";
-import KhalitLogo from "../../assets/Khalti-Logo.jpg";
-import PhonePay from "../../assets/PhonePay-Logo.jpg";
-import IMELogo from "../../assets/IME-Logo.jpg";
+import PashupatiEcommerceLogo from "../../assets/partner/PashupatiEcommerce-Logo.jpg";
+import SanamChaudhary from "../../assets/partner/SanamChaudhary-logo.jpg";
+import SastoMartLogo from "../../assets/partner/SastoMart-Logo.jpg";
+import SoftwareLogo from "../../assets/partner/Software-Logo.jpg";
+import Tcompany from "../../assets/partner/TCompany-Logo.jpg";
+import EsewaLogo from "../../assets/partner/Esewa-logo.jpg";
+import KhalitLogo from "../../assets/partner/Khalti-Logo.jpg";
+import PhonePay from "../../assets/partner/PhonePay-Logo.jpg";
+import IMELogo from "../../assets/partner/IME-Logo.jpg";
 
 const hiringPartners = [
   { id: 1, image: BroadFashionLogo, name: "Broad Fashion" },

@@ -1,6 +1,6 @@
 import { ArrowRight, Calendar, Phone, Percent, Book } from "lucide-react";
 
-import HeroImage from "../../assets/HeroImage.png";
+import FrontImage from "../../assets/Front-Image.jpg";
 
 export default function Offer() {
   return (
@@ -45,11 +45,11 @@ export default function Offer() {
 
             <div className="hidden lg:block -mt-20">
               <img
-                src={HeroImage}
+                src={FrontImage}
                 width={400}
                 height={300}
                 alt="Student reading"
-                className="mx-auto"
+                className="mx-auto -mb-12"
               />
             </div>
           </div>

@@ -12,14 +12,38 @@ import {
 import Header from "../../components/common/header";
 import Footer from "../../components/common/footer";
 import { ArrowDown } from "lucide-react";
-import Image from "../../assets/Hero.png";
+import Advance from "../../assets/video/Advance-Mern.jpg";
+import DataScience from "../../assets/video/Data-Science.jpg";
+import DigitalSEO from "../../assets/video/Digital-SEO.jpg";
+import GraphicDesign from "../../assets/video/Graphic-design.jpg";
+import Mern from "../../assets/video/MERN-STACK.jpg";
+import UI from "../../assets/video/UI-UX.jpg";
+
+import img1 from "../../assets/img-1.jpg";
+import img2 from "../../assets/img-2.jpg";
+import img3 from "../../assets/img-3.jpg";
+import img4 from "../../assets/img-4.jpg";
+import img5 from "../../assets/img-5.jpg";
+import img6 from "../../assets/img-6.jpg";
+import img7 from "../../assets/img-7.jpg";
+import img8 from "../../assets/img-8.jpg";
+import img9 from "../../assets/img-9.jpg";
+import img10 from "../../assets/img-10.jpg";
+import img11 from "../../assets/img-11.jpg";
+import img12 from "../../assets/img-12.jpg";
+import img13 from "../../assets/img-13.webp";
+import img14 from "../../assets/img-14.webp";
+import img15 from "../../assets/img-15.webp";
+import img16 from "../../assets/img-16.webp";
+import img17 from "../../assets/img-17.jpg";
+import img18 from "../../assets/img-18.webp";
 
 const testimonials = [
   {
     id: 1,
     name: "Mr. Manish Chaudhary",
     course: "Advanced AI & Machine Learning with Python",
-    image: `${Image}`,
+    image: `${img1}`,
     testimonial:
       "The AI course at Broadway Infosys transformed my career. The instructors' expertise and hands-on projects helped me master machine learning and LLMs, leading to a dream job in AI development.",
     rating: 5,
@@ -27,9 +51,9 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Mr. Krishna Gaha",
+    name: "Ms. Kritika Gaha",
     course: "Professional Java Developer Program",
-    image: `${Image}`,
+    image: `${img2}`,
     testimonial:
       "Broadway Infosys provided an exceptional learning experience. The Java course was comprehensive, and the instructors' guidance made complex concepts easy to grasp. Highly recommend!",
     rating: 4,
@@ -39,7 +63,7 @@ const testimonials = [
     id: 3,
     name: "Ms. Pragya Sharad Khadka",
     course: "Full-Stack Web Development with Python & Django",
-    image: `${Image}`,
+    image: `${img3}`,
     testimonial:
       "The Python and Django course was a game-changer. The instructors were industry experts who provided real-world insights, and the management team ensured a seamless learning journey.",
     rating: 5,
@@ -47,9 +71,9 @@ const testimonials = [
   },
   {
     id: 4,
-    name: "Ms. Rabina Kumari Chaudhary",
+    name: "Mr. Ram Chaudhary",
     course: "UI/UX & Web Design Mastery",
-    image: `${Image}`,
+    image: `${img4}`,
     testimonial:
       "The web design course ignited my passion for creating user-friendly interfaces. The instructor's enthusiasm and clear explanations made every session engaging and impactful.",
     rating: 5,
@@ -59,7 +83,7 @@ const testimonials = [
     id: 5,
     name: "Mr. Prakash Bahadur Kathayat",
     course: "Data Science & Analytics with Python",
-    image: `${Image}`,
+    image: `${img5}`,
     testimonial:
       "The Data Science course was exceptionally well-structured. The hands-on projects and expert guidance helped me transition into a data analyst role with confidence.",
     rating: 4,
@@ -69,7 +93,7 @@ const testimonials = [
     id: 6,
     name: "Mr. Saphal Rai",
     course: "Cross-Platform Mobile Development with Flutter",
-    image: `${Image}`,
+    image: `${img6}`,
     testimonial:
       "Learning Flutter at Broadway Infosys was a fantastic experience. The instructor's clear, conceptual teaching style empowered me to build professional mobile apps.",
     rating: 5,
@@ -79,7 +103,7 @@ const testimonials = [
     id: 7,
     name: "Mr. Rejas Pandey",
     course: "Professional Accounting & Financial Analysis",
-    image: `${Image}`,
+    image: `${img7}`,
     testimonial:
       "The accounting course was outstanding. The instructor's ability to simplify complex financial concepts and the supportive environment at Broadway Infosys made learning a joy.",
     rating: 4,
@@ -89,7 +113,7 @@ const testimonials = [
     id: 8,
     name: "Mr. Abhishek Mishra",
     course: "Data Science & Machine Learning with Python",
-    image: `${Image}`,
+    image: `${img8}`,
     testimonial:
       "Coming from a non-technical background, I was amazed at how the instructor made Python and Data Science accessible. The course was a turning point in my career.",
     rating: 5,
@@ -99,7 +123,7 @@ const testimonials = [
     id: 9,
     name: "Ms. Sanglamu Sherpa",
     course: "Advanced Web Design & User Experience",
-    image: `${Image}`,
+    image: `${img9}`,
     testimonial:
       "The web design course cleared all my doubts and boosted my confidence. The instructor's practical approach and the institute's resources were top-notch.",
     rating: 4,
@@ -109,7 +133,7 @@ const testimonials = [
     id: 10,
     name: "Mr. Santosh Kunwar",
     course: "Professional Graphic Design with Adobe Suite",
-    image: `${Image}`,
+    image: `${img10}`,
     testimonial:
       "मैले ग्राफिक डिजाइन कोर्समा धेरै कुरा सिकें। शिक्षकको व्यावहारिक र स्पष्ट शिक्षणले मलाई फोटोशप र इलस्ट्रेटरमा निपुण बनायो। The course was a creative breakthrough for me.",
     rating: 5,
@@ -119,7 +143,7 @@ const testimonials = [
     id: 11,
     name: "Mr. Jaganath Raila",
     course: "Quality Assurance & Software Testing",
-    image: `${Image}`,
+    image: `${img11}`,
     testimonial:
       "The QA course was engaging and practical. The instructor fostered a supportive environment, making it easy to learn and excel in software testing.",
     rating: 4,
@@ -129,7 +153,7 @@ const testimonials = [
     id: 12,
     name: "Mr. Rimesh Chaudhary",
     course: "Advanced Data Science with Python",
-    image: `${Image}`,
+    image: `${img12}`,
     testimonial:
       "Broadway Infosys opened the door to data science for me. The instructor's expertise and real-world projects made this one of the best learning experiences I've had.",
     rating: 4,
@@ -139,7 +163,7 @@ const testimonials = [
     id: 13,
     name: "Mr. Prajjwol Mani Bajracharya",
     course: "Full-Stack React & Node.js Development",
-    image: `${Image}`,
+    image: `${img13}`,
     testimonial:
       "The React course was meticulously designed and delivered with professional excellence. It equipped me with the skills to build modern web applications.",
     rating: 5,
@@ -149,7 +173,7 @@ const testimonials = [
     id: 14,
     name: "Mr. Bidur Timsina",
     course: "Data Science & AI with Python",
-    image: `${Image}`,
+    image: `${img14}`,
     testimonial:
       "The Data Science course was a perfect blend of theory and practice. The instructor's clear explanations and interactive sessions made complex topics approachable.",
     rating: 4,
@@ -159,7 +183,7 @@ const testimonials = [
     id: 15,
     name: "Ms. Samikshya Rajthala",
     course: "Advanced Graphic Design & Visual Communication",
-    image: `${Image}`,
+    image: `${img15}`,
     testimonial:
       "The graphic design course was intensive and inspiring. The instructor's guidance and real-world projects helped me create a professional portfolio.",
     rating: 5,
@@ -169,7 +193,7 @@ const testimonials = [
     id: 16,
     name: "Mr. Sahadev Pandey",
     course: "Enterprise Java Development",
-    image: `${Image}`,
+    image: `${img16}`,
     testimonial:
       "Broadway Infosys provided an exceptional Java learning experience. The instructors were always ready to mentor, making it a rewarding journey.",
     rating: 4,
@@ -179,7 +203,7 @@ const testimonials = [
     id: 17,
     name: "Ms. Raksha Khadka",
     course: "Data Science & Machine Learning Mastery",
-    image: `${Image}`,
+    image: `${img17}`,
     testimonial:
       "Joining the Data Science course was a life-changing decision. The mentor's expertise and the institute's support made my learning journey truly remarkable.",
     rating: 5,
@@ -189,7 +213,7 @@ const testimonials = [
     id: 18,
     name: "Mr. Hemanta Rajbanshi",
     course: "Data Science & Predictive Analytics",
-    image: `${Image}`,
+    image: `${img18}`,
     testimonial:
       "The instructors' industry experience and practical teaching methods made the Data Science course incredibly valuable. I feel confident in my new skills.",
     rating: 4,
@@ -202,7 +226,7 @@ const videoTestimonials = [
     id: 1,
     name: "Mr. Ashish Poudel",
     course: "Professional Web Design & UI/UX",
-    thumbnail: `${Image}`,
+    thumbnail: `${UI}`,
     duration: "2:30",
     views: "1.2K",
     rating: 5,
@@ -212,7 +236,7 @@ const videoTestimonials = [
     id: 2,
     name: "Mr. Ruchi Raj Karki",
     course: "Full-Stack MERN Development",
-    thumbnail: `${Image}`,
+    thumbnail: `${Mern}`,
     duration: "3:15",
     views: "2.5K",
     rating: 4,
@@ -222,7 +246,7 @@ const videoTestimonials = [
     id: 3,
     name: "Mr. Sandesh Kharal",
     course: "Advanced MERN Stack Development",
-    thumbnail: `${Image}`,
+    thumbnail: `${Advance}`,
     duration: "2:45",
     views: "1.8K",
     rating: 4,
@@ -232,7 +256,7 @@ const videoTestimonials = [
     id: 4,
     name: "Mr. Subodh Parajuli",
     course: "Digital Marketing & SEO Mastery",
-    thumbnail: `${Image}`,
+    thumbnail: `${DigitalSEO}`,
     duration: "4:20",
     views: "3.1K",
     rating: 5,
@@ -242,7 +266,7 @@ const videoTestimonials = [
     id: 5,
     name: "Ms. Smriti Joshi",
     course: "Data Science & Machine Learning with Python",
-    thumbnail: `${Image}`,
+    thumbnail: `${DataScience}`,
     duration: "3:30",
     views: "2.0K",
     rating: 4,
@@ -252,7 +276,7 @@ const videoTestimonials = [
     id: 6,
     name: "Ms. Chetana Nath",
     course: "Professional Graphic Design & Visual Arts",
-    thumbnail: `${Image}`,
+    thumbnail: `${GraphicDesign}`,
     duration: "2:55",
     views: "1.5K",
     rating: 5,
@@ -326,7 +350,7 @@ export default function StudentTestimonials() {
                     </p>
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center">
+                    <div className="flex items-center gap-2">
                       <img
                         src={testimonial.image}
                         alt={testimonial.name}
@@ -339,24 +363,24 @@ export default function StudentTestimonials() {
                         <p className="text-xs text-gray-600">
                           {testimonial.course}
                         </p>
+                        <div className="flex flex-row items-center gap-5 mt-2">
+                          <div className="flex items-end items-center">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                className={`w-3 h-3 ${
+                                  i < testimonial.rating
+                                    ? "text-yellow-400 fill-current"
+                                    : "text-gray-300"
+                                }`}
+                              />
+                            ))}
+                          </div>
+                          <span className="text-xs text-gray-500">
+                            {testimonial.date}
+                          </span>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex flex-col items-end">
-                      <div className="flex">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-3 h-3 ${
-                              i < testimonial.rating
-                                ? "text-yellow-400 fill-current"
-                                : "text-gray-300"
-                            }`}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-xs text-gray-500">
-                        {testimonial.date}
-                      </span>
                     </div>
                   </div>
                 </div>
