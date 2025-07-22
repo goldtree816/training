@@ -8,6 +8,9 @@ import {
   Play,
   ChevronDown,
   ChevronUp,
+  ArrowBigRight,
+  Circle,
+  Check
 } from "lucide-react";
 import { useParams } from "react-router-dom";
 
@@ -221,6 +224,36 @@ const courseDetailsData = {
     ],
     role: "Accountant",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + T: Create new transaction in accounting software",
+        "Ctrl + S: Save ledger entries",
+        "Alt + R: Reconcile accounts",
+        "Ctrl + P: Print financial reports",
+        "Alt + F: Open financial statement templates",
+      ],
+      formattingTips: [
+        "Use consistent number formats for currency (e.g., $1,234.56)",
+        "Apply standardized date formats (DD/MM/YYYY)",
+        "Utilize double-entry formatting for accurate bookkeeping",
+        "Set up templates for recurring journal entries",
+        "Use color coding for account types in ledgers",
+      ],
+      efficiencyTips: [
+        "Automate recurring transactions using software",
+        "Use batch processing for multiple entries",
+        "Leverage templates for financial reports",
+        "Schedule regular account reconciliation",
+        "Integrate accounting software with bank feeds",
+      ],
+      customization: [
+        "Customize chart of accounts for specific business needs",
+        "Set up user-defined fields for custom reporting",
+        "Create personalized financial dashboards",
+        "Tailor invoice templates to brand identity",
+        "Configure GST settings for compliance",
+      ],
+    },
   },
   2: {
     title: "AWS Full Course",
@@ -249,6 +282,36 @@ const courseDetailsData = {
     ],
     role: "Cloud Engineer",
     trainingMode: "Physical & Live Online Classes, including Night Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + Shift + N: Open new AWS Management Console tab",
+        "Alt + S: Search AWS services",
+        "Ctrl + D: Duplicate resource configurations",
+        "Ctrl + R: Refresh resource list",
+        "Alt + C: Open cost explorer",
+      ],
+      formattingTips: [
+        "Use consistent naming conventions for AWS resources",
+        "Apply tags to organize resources effectively",
+        "Format JSON policies with proper indentation",
+        "Use standardized AMI naming for clarity",
+        "Document architecture with consistent diagramming tools",
+      ],
+      efficiencyTips: [
+        "Use AWS CLI for repetitive tasks",
+        "Automate deployments with CloudFormation",
+        "Leverage AWS Lambda for serverless automation",
+        "Schedule resource shutdowns for cost savings",
+        "Monitor resources with CloudWatch dashboards",
+      ],
+      customization: [
+        "Create custom CloudFormation templates",
+        "Configure custom IAM policies",
+        "Set up personalized CloudWatch dashboards",
+        "Customize VPC settings for specific use cases",
+        "Tailor S3 bucket policies for access control",
+      ],
+    },
   },
   3: {
     title: "Advanced Cybersecurity Course",
@@ -277,6 +340,36 @@ const courseDetailsData = {
     ],
     role: "Cybersecurity Specialist",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + T: Open new terminal for security tools",
+        "Ctrl + C: Cancel active scans safely",
+        "Alt + L: View logs in monitoring tools",
+        "Ctrl + S: Save security configurations",
+        "Alt + P: Open packet capture tools",
+      ],
+      formattingTips: [
+        "Use consistent log file naming conventions",
+        "Format security policies with clear sections",
+        "Apply standardized firewall rule formats",
+        "Document vulnerabilities with CVE formats",
+        "Use structured JSON for SIEM configurations",
+      ],
+      efficiencyTips: [
+        "Automate scans with scheduled scripts",
+        "Use SIEM tools for centralized monitoring",
+        "Leverage pre-built security templates",
+        "Batch process vulnerability assessments",
+        "Integrate threat intelligence feeds",
+      ],
+      customization: [
+        "Customize firewall rules for specific networks",
+        "Create tailored incident response plans",
+        "Configure SIEM dashboards for key metrics",
+        "Set up custom alerts for threat detection",
+        "Personalize security tool interfaces",
+      ],
+    },
   },
   4: {
     title: "Digital Marketing Full Course",
@@ -306,6 +399,36 @@ const courseDetailsData = {
     ],
     role: "Digital Marketer",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + T: Open new tab for analytics tools",
+        "Ctrl + S: Save campaign settings",
+        "Alt + P: Preview ad creatives",
+        "Ctrl + R: Refresh analytics dashboards",
+        "Alt + C: Open content scheduler",
+      ],
+      formattingTips: [
+        "Use consistent naming for campaign assets",
+        "Format ad copy with clear headlines",
+        "Apply standardized URL tracking parameters",
+        "Use branded templates for social posts",
+        "Organize analytics reports with clear sections",
+      ],
+      efficiencyTips: [
+        "Schedule posts using automation tools",
+        "Use templates for recurring campaigns",
+        "Batch create ad variations",
+        "Leverage analytics dashboards for quick insights",
+        "Automate email marketing workflows",
+      ],
+      customization: [
+        "Create custom audience segments",
+        "Design branded social media templates",
+        "Configure personalized analytics dashboards",
+        "Tailor ad campaigns to specific demographics",
+        "Customize email marketing templates",
+      ],
+    },
   },
   5: {
     title: "Excel Full Course",
@@ -348,6 +471,36 @@ const courseDetailsData = {
     role: "Excel Analyst",
     trainingMode:
       "Both, Physical & Live Online Classes, including Online Live Night Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + Shift + L: Toggle filters",
+        "Alt + =: AutoSum",
+        "Ctrl + ;: Insert current date",
+        "F2: Edit selected cell",
+        "Ctrl + Shift + $: Apply currency format",
+      ],
+      formattingTips: [
+        "Use consistent number formats for data types",
+        "Apply conditional formatting for data insights",
+        "Utilize cell styles for uniform reports",
+        "Format pivot tables with clear layouts",
+        "Use custom number formats for specific needs",
+      ],
+      efficiencyTips: [
+        "Use pivot tables for quick data summaries",
+        "Automate repetitive tasks with macros",
+        "Leverage data validation for error-free inputs",
+        "Use Power Query for large datasets",
+        "Create reusable report templates",
+      ],
+      customization: [
+        "Create custom Excel templates",
+        "Design personalized pivot table styles",
+        "Set up custom conditional formatting rules",
+        "Configure macros for specific workflows",
+        "Customize ribbon for frequent tools",
+      ],
+    },
   },
   6: {
     title: "Java Full Course",
@@ -376,6 +529,36 @@ const courseDetailsData = {
     ],
     role: "Java Developer",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + Shift + F: Format code",
+        "Ctrl + D: Delete line",
+        "Ctrl + /: Comment/uncomment line",
+        "Alt + Shift + R: Refactor rename",
+        "Ctrl + Space: Code completion",
+      ],
+      formattingTips: [
+        "Follow consistent Java naming conventions",
+        "Use proper indentation for code readability",
+        "Apply Javadoc formatting for documentation",
+        "Organize imports consistently",
+        "Use consistent brace styles",
+      ],
+      efficiencyTips: [
+        "Use IDE templates for common patterns",
+        "Leverage debugging tools for quick fixes",
+        "Automate builds with Maven or Gradle",
+        "Use version control for collaboration",
+        "Write reusable code libraries",
+      ],
+      customization: [
+        "Configure IDE for custom key bindings",
+        "Create custom code templates",
+        "Set up personalized debugging configurations",
+        "Customize project build settings",
+        "Tailor JavaDoc templates for projects",
+      ],
+    },
   },
   7: {
     title: "MERN Stack Web Development",
@@ -404,6 +587,36 @@ const courseDetailsData = {
     ],
     role: "Full-Stack Developer",
     trainingMode: "Physical & Live Online Classes, including Night Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + S: Save project files",
+        "Ctrl + Shift + F: Format code",
+        "Ctrl + /: Toggle comment in code",
+        "Alt + Shift + F: Auto-fix linting issues",
+        "Ctrl + B: Build project",
+      ],
+      formattingTips: [
+        "Use ESLint for consistent code style",
+        "Apply Prettier for automatic formatting",
+        "Use consistent JSON structures for APIs",
+        "Organize React components with clear naming",
+        "Format MongoDB queries for readability",
+      ],
+      efficiencyTips: [
+        "Use hot reloading for faster development",
+        "Leverage reusable React components",
+        "Automate API testing with Postman",
+        "Use MongoDB Atlas for quick setup",
+        "Implement CI/CD pipelines",
+      ],
+      customization: [
+        "Create custom React component libraries",
+        "Configure custom API endpoints",
+        "Set up personalized VS Code extensions",
+        "Customize MongoDB schemas for projects",
+        "Tailor CSS frameworks for UI",
+      ],
+    },
   },
   8: {
     title: "RedHat Certified Engineer",
@@ -433,6 +646,36 @@ const courseDetailsData = {
     ],
     role: "Linux System Administrator",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + C: Terminate running process",
+        "Ctrl + D: Exit terminal session",
+        "Ctrl + L: Clear terminal screen",
+        "Alt + T: Open new terminal tab",
+        "Ctrl + R: Search command history",
+      ],
+      formattingTips: [
+        "Use consistent naming for scripts",
+        "Format Ansible playbooks with YAML",
+        "Apply standardized log file formats",
+        "Document commands with clear comments",
+        "Use consistent file permission formats",
+      ],
+      efficiencyTips: [
+        "Automate tasks with Ansible playbooks",
+        "Use shell scripts for repetitive tasks",
+        "Leverage Red Hat Satellite for management",
+        "Monitor systems with Cockpit",
+        "Batch process system updates",
+      ],
+      customization: [
+        "Create custom Ansible roles",
+        "Configure custom system monitoring",
+        "Set up personalized shell aliases",
+        "Customize Red Hat system profiles",
+        "Tailor log rotation policies",
+      ],
+    },
   },
   9: {
     title: "Social Media Marketing",
@@ -461,6 +704,36 @@ const courseDetailsData = {
     ],
     role: "Social Media Marketer",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + T: Open new tab for social media tools",
+        "Ctrl + S: Save post drafts",
+        "Alt + P: Preview social media posts",
+        "Ctrl + R: Refresh analytics dashboards",
+        "Alt + C: Open content calendar",
+      ],
+      formattingTips: [
+        "Use consistent hashtag formats",
+        "Apply branded post templates",
+        "Format captions with clear structure",
+        "Use standardized image sizes",
+        "Organize analytics reports clearly",
+      ],
+      efficiencyTips: [
+        "Schedule posts with automation tools",
+        "Use templates for recurring content",
+        "Batch create social media assets",
+        "Leverage analytics for quick insights",
+        "Automate comment moderation",
+      ],
+      customization: [
+        "Create custom post templates",
+        "Configure personalized analytics dashboards",
+        "Tailor ad campaigns to platforms",
+        "Design branded social media graphics",
+        "Set up custom content calendars",
+      ],
+    },
   },
   10: {
     title: "SPSS Full Course",
@@ -489,6 +762,36 @@ const courseDetailsData = {
     ],
     role: "Data Analyst",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + T: Open new data view",
+        "Ctrl + S: Save dataset",
+        "Alt + G: Generate graphs",
+        "Ctrl + R: Run analysis",
+        "Alt + V: Switch to variable view",
+      ],
+      formattingTips: [
+        "Use consistent variable naming conventions",
+        "Apply standardized data formats",
+        "Format output tables for clarity",
+        "Use consistent chart styles",
+        "Document datasets with clear labels",
+      ],
+      efficiencyTips: [
+        "Use syntax for repetitive analyses",
+        "Automate data cleaning processes",
+        "Leverage templates for reports",
+        "Batch process statistical tests",
+        "Save custom chart templates",
+      ],
+      customization: [
+        "Create custom output templates",
+        "Configure personalized chart styles",
+        "Set up custom variable attributes",
+        "Tailor syntax for specific analyses",
+        "Customize SPSS interface",
+      ],
+    },
   },
   11: {
     title: "Tally",
@@ -517,6 +820,36 @@ const courseDetailsData = {
     ],
     role: "Tally Accountant",
     trainingMode: "Physical & Live Online Classes",
+    productivityTips: {
+      keyboardShortcuts: [
+        "Ctrl + N: Create new voucher",
+        "Ctrl + S: Save entries",
+        "Alt + R: Open reports menu",
+        "Ctrl + P: Print invoices",
+        "Alt + G: Go to GST portal",
+      ],
+      formattingTips: [
+        "Use consistent ledger naming",
+        "Apply standardized voucher formats",
+        "Format reports with clear headings",
+        "Use uniform date formats",
+        "Apply branded invoice templates",
+      ],
+      efficiencyTips: [
+        "Automate voucher entries",
+        "Use batch processing for transactions",
+        "Leverage pre-built report templates",
+        "Integrate with bank feeds",
+        "Schedule GST filings",
+      ],
+      customization: [
+        "Customize ledger categories",
+        "Create tailored invoice designs",
+        "Configure custom report layouts",
+        "Set up personalized dashboards",
+        "Tailor GST compliance settings",
+      ],
+    },
   },
 };
 
@@ -595,11 +928,12 @@ export default function CourseDetails() {
                     "Learn advanced skills in this comprehensive course."}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-white text-blue-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors">
-                    ENROLL NOW →
+                  <button className=" flex gap-5 bg-white text-blue-600 px-8 py-3 rounded font-semibold hover:bg-gray-100 transition-colors">
+                    ENROLL NOW{" "}
+                    <ArrowBigRight className="w-5 h-5 text-blue-600" />
                   </button>
-                  <button className="bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition-colors">
-                    SEND AN INQUIRY →
+                  <button className="flex gap-5 bg-orange-600 text-white px-8 py-3 rounded font-semibold hover:bg-orange-700 transition-colors">
+                    SEND AN INQUIRY <ArrowBigRight className="w-5 h-5" />
                   </button>
                 </div>
                 <div className="flex items-center mt-6">
@@ -676,9 +1010,14 @@ export default function CourseDetails() {
                   <ul className="space-y-2 mb-8">
                     {(courseDetails.highlights || []).map(
                       (highlight, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-green-600 mr-2">•</span>
-                          <span className="text-gray-700">{highlight}</span>
+                        <li
+                          key={index}
+                          className="flex items-center justify-start space-x-3"
+                        >
+                          <Circle className="w-2 h-2 text-green-600 fill-green-600" />
+                          <span className="text-gray-700 text-base">
+                            {highlight}
+                          </span>
                         </li>
                       )
                     )}
@@ -698,38 +1037,48 @@ export default function CourseDetails() {
                   </h2>
                   <ul className="space-y-3">
                     {(courseDetails.benefits || []).map((benefit, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-green-600 mr-2">•</span>
-                        <span className="text-gray-700">{benefit}</span>
+                      <li key={index} className="flex items-center justify-start space-x-3">
+                        <Circle className="w-2 h-2 text-green-600 fill-green-600" />
+                        <span className="text-gray-700 text-base">{benefit}</span>
                       </li>
                     ))}
                   </ul>
                   <div className="mt-8 space-y-4">
                     {[
-                      "Keyboard Shortcuts",
-                      "Formatting Tips",
-                      "Efficiency Tips",
-                      "Customization",
-                    ].map((section) => (
-                      <div key={section} className="bg-blue-50 rounded-lg">
+                      {
+                        key: "Keyboard Shortcuts",
+                        property: "keyboardShortcuts",
+                      },
+                      { key: "Formatting Tips", property: "formattingTips" },
+                      { key: "Efficiency Tips", property: "efficiencyTips" },
+                      { key: "Customization", property: "customization" },
+                    ].map(({ key, property }) => (
+                      <div key={key} className="bg-blue-50 rounded-lg">
                         <button
-                          onClick={() => toggleSection(section)}
+                          onClick={() => toggleSection(key)}
                           className="w-full flex items-center justify-between p-4 text-left"
                         >
                           <span className="font-medium text-gray-800">
-                            + {section}
+                            + {key}
                           </span>
-                          {expandedSections[section] ? (
+                          {expandedSections[key] ? (
                             <ChevronUp className="w-5 h-5 text-gray-600" />
                           ) : (
                             <ChevronDown className="w-5 h-5 text-gray-600" />
                           )}
                         </button>
-                        {expandedSections[section] && (
+                        {expandedSections[key] && (
                           <div className="px-4 pb-4">
-                            <p className="text-gray-700">
-                              Content for {section} section...
-                            </p>
+                            <ul className="space-y-2">
+                              {(
+                                courseDetails.productivityTips?.[property] || []
+                              ).map((tip, index) => (
+                                <li key={index} className="flex items-start">
+                                  <span className="text-blue-600 mr-2">•</span>
+                                  <span className="text-gray-700">{tip}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                         )}
                       </div>
@@ -828,10 +1177,10 @@ export default function CourseDetails() {
                                   </div>
                                   <div className="text-left">
                                     <div className="text-blue-600 font-bold text-lg">
-                                      BROADWAY
+                                      GOLDTREE
                                     </div>
                                     <div className="text-blue-600 font-bold text-sm">
-                                      INFOSYS
+                                      GROUP
                                     </div>
                                     <div className="text-gray-500 text-xs">
                                       Since 2008
@@ -893,7 +1242,7 @@ export default function CourseDetails() {
                                   Certificate ID: BIS-{course.id}-2025-001
                                 </p>
                                 <p className="text-xs text-gray-500">
-                                  Verify at: broadwayinfosys.com/verify
+                                  Verify at: goldtree.com/verify
                                 </p>
                               </div>
                             </div>
@@ -986,9 +1335,9 @@ export default function CourseDetails() {
                   <div className="bg-blue-50 rounded-lg p-6">
                     <ul className="space-y-3">
                       {(courseDetails.syllabus || []).map((item, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="text-blue-600 mr-2">✓</span>
-                          <span className="text-gray-700">{item}</span>
+                        <li key={index} className="flex items-center justify-start space-x-3">
+                          <Check className="w-3 h-3 text-blue-600 fill-blue-600" />
+                          <span className="text-gray-700 text-base">{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -1021,8 +1370,8 @@ export default function CourseDetails() {
             </div>
             <div className="lg:col-span-1">
               <div className="sticky top-8">
-                <button className="w-full bg-orange-600 text-white py-3 px-6 rounded font-semibold hover:bg-orange-700 transition-colors mb-6">
-                  SEND AN INQUIRY →
+                <button className="flex gap-5 w-full bg-orange-600 text-white py-3 px-6 rounded font-semibold hover:bg-orange-700 transition-colors mb-6">
+                  SEND AN INQUIRY <ArrowBigRight className="w-5 h-5" />
                 </button>
                 <div className="bg-gray-50 rounded-lg p-6 mb-6">
                   <h3 className="text-lg font-semibold text-gray-800 mb-4">
