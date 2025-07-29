@@ -19,6 +19,7 @@ const RoutingConfig = () => {
         <Route path="/upcoming_classes/:classId" element={<CourseDetails />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/blog" element={<BlogSection />} />
+        <Route path="/blog/:postId" element={<BlogSection />} />
       </Routes>
     </BrowserRouter>
   );
