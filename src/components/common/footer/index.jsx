@@ -250,9 +250,8 @@ export default function Footer() {
             <div className="mb-6">
               <h4 className="font-semibold mb-2">Telephone Contact</h4>
               <div className="text-gray-300 text-sm space-y-1">
-                <p>+977-1-4111849 / 4117578 / 4111583 / 5912405</p>
-                <p>+977-9841002000 (WhatsApp) +977-9841002000</p>
-                <p>+977-9841002000 (Viber)</p>
+                <p>9824877222 (WhatsApp)</p>
+                <p>9824877222 (Viber)</p>
               </div>
             </div>
 
@@ -288,7 +287,7 @@ export default function Footer() {
                   <Instagram className="w-8 h-5 text-white" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/107562640/admin/dashboard/"
                   className="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                 >
                   <Linkedin className="w-8 h-5 text-white" />
