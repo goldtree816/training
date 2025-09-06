@@ -3,6 +3,7 @@ import { Search, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import logo from "../../../assets/logo.png";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,13 +16,8 @@ export default function Header() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <div className="flex items-center">
-                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
-                  <span className="text-white font-bold text-lg">G</span>
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-blue-600">GOLDTREE</h1>
-                  <p className="text-xs text-blue-600">GROUP</p>
-                  <p className="text-xs text-gray-500">Since 2006</p>
+                <div className="w-20 h-20 rounded-lg flex items-center justify-center">
+                  <img src={logo} alt="Logo" />
                 </div>
               </div>
             </div>

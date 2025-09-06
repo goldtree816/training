@@ -3,8 +3,8 @@ import moment from "moment";
 import FrontImage from "../../assets/Front-Image.jpg";
 
 export default function Offer() {
-  const startDate = moment("2025-05-15");
-  const endDate = moment("2025-06-15");
+  const currentDate = moment();
+  
 
   return (
     <>
@@ -24,7 +24,7 @@ export default function Offer() {
 
               <div className="flex items-center text-gray-700 mb-8">
                 <Calendar className="w-5 h-5 mr-2" />
-                <span>{startDate.format("MMMM D, YYYY")} - {endDate.format("MMMM D, YYYY")}</span>
+                <span>{currentDate.format("MMMM D, YYYY") + " - " + currentDate.add(1, "month").format("MMMM D, YYYY")}</span>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
