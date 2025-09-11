@@ -17,378 +17,220 @@ import { useParams } from "react-router-dom";
 
 // Generate the upcoming dates data with dynamic dates
 const generateUpcomingClassesData = () => {
-  const baseDate = moment();
+  // Get the current date and last day of the current month
+  const currentDate = moment();
+  const lastDayOfMonth = moment().endOf('month');
+  
+  // Check if today is the last day of the month
+  const isLastDay = currentDate.isSame(lastDayOfMonth, 'day');
+  
+  // Set nextMonthStart to the start of the next month if today is the last day, otherwise use the current month
+  const nextMonthStart = isLastDay ? moment().add(1, 'month').startOf('month') : moment().startOf('month');
 
   return [
     {
       id: 1,
       title: "Full Accounting Course",
       duration: "6 Month",
-      date:
-        baseDate.clone().format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(6, "month").format("MMMM D, YYYY"),
+      date: nextMonthStart.clone(),
       time: "08:00 PM - 09:30 PM",
       moreClasses: 5,
       link: "/upcoming_classes/course_details/1",
       schedules: [
-        { date: baseDate.clone().date(15), time: "08:00 PM - 09:30 PM" },
-        { date: baseDate.clone().date(16), time: "09:00 AM - 10:30 AM" },
-        { date: baseDate.clone().date(17), time: "02:00 PM - 03:30 PM" },
-        { date: baseDate.clone().date(18), time: "06:00 PM - 07:30 PM" },
-        { date: baseDate.clone().date(19), time: "10:00 AM - 11:30 AM" },
+        { date: nextMonthStart.clone().date(1), time: "08:00 PM - 09:30 PM" },
+        { date: nextMonthStart.clone().date(2), time: "09:00 AM - 10:30 AM" },
+        { date: nextMonthStart.clone().date(3), time: "02:00 PM - 03:30 PM" },
+        { date: nextMonthStart.clone().date(4), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(5), time: "10:00 AM - 11:30 AM" },
       ],
     },
     {
       id: 2,
       title: "AWS Full Course",
       duration: "1 Month",
-      date:
-        baseDate.clone().add(1, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(2, "month").format("MMMM D, YYYY"),
-      time: "07:00 AM - 08:30 AM",
+      date: nextMonthStart.clone(),
       moreClasses: 3,
       link: "/upcoming_classes/2",
       schedules: [
-        {
-          date: baseDate.clone().add(1, "month").date(16),
-          time: "07:00 AM - 08:30 AM",
-        },
-        {
-          date: baseDate.clone().add(1, "month").date(18),
-          time: "03:00 PM - 04:30 PM",
-        },
-        {
-          date: baseDate.clone().add(1, "month").date(20),
-          time: "11:00 AM - 12:30 PM",
-        },
+        { date: nextMonthStart.clone().date(1), time: "07:00 AM - 08:30 AM" },
+        { date: nextMonthStart.clone().date(3), time: "03:00 PM - 04:30 PM" },
+        { date: nextMonthStart.clone().date(5), time: "11:00 AM - 12:30 PM" },
       ],
     },
     {
       id: 3,
       title: "Advanced Cybersecurity Course",
       duration: "2.5 Months",
-      date:
-        baseDate.clone().add(2, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(4.5, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(2.5, "months"),
+      },
       time: "08:00 AM - 09:30 AM",
       moreClasses: 6,
       link: "/upcoming_classes/3",
       schedules: [
-        {
-          date: baseDate.clone().add(2, "month").date(16),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(2, "month").date(17),
-          time: "10:00 AM - 11:30 AM",
-        },
-        {
-          date: baseDate.clone().add(2, "month").date(19),
-          time: "02:00 PM - 03:30 PM",
-        },
-        {
-          date: baseDate.clone().add(2, "month").date(21),
-          time: "04:00 PM - 05:30 PM",
-        },
-        {
-          date: baseDate.clone().add(2, "month").date(23),
-          time: "09:00 AM - 10:30 AM",
-        },
-        {
-          date: baseDate.clone().add(2, "month").date(25),
-          time: "06:00 PM - 07:30 PM",
-        },
+        { date: nextMonthStart.clone().date(1), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(2), time: "10:00 AM - 11:30 AM" },
+        { date: nextMonthStart.clone().date(4), time: "02:00 PM - 03:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "04:00 PM - 05:30 PM" },
+        { date: nextMonthStart.clone().date(8), time: "09:00 AM - 10:30 AM" },
+        { date: nextMonthStart.clone().date(10), time: "06:00 PM - 07:30 PM" },
       ],
     },
     {
       id: 4,
       title: "Digital Marketing Full Course",
       duration: "3 Months",
-      date:
-        baseDate.clone().add(3, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(6, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(3, "months"),
+      },
       time: "09:30 AM - 11:00 AM",
       moreClasses: 4,
       link: "/upcoming_classes/4",
       schedules: [
-        {
-          date: baseDate.clone().add(3, "month").date(16),
-          time: "09:30 AM - 11:00 AM",
-        },
-        {
-          date: baseDate.clone().add(3, "month").date(18),
-          time: "01:00 PM - 02:30 PM",
-        },
-        {
-          date: baseDate.clone().add(3, "month").date(20),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(3, "month").date(22),
-          time: "08:00 AM - 09:30 AM",
-        },
+        { date: nextMonthStart.clone().date(1), time: "09:30 AM - 11:00 AM" },
+        { date: nextMonthStart.clone().date(3), time: "01:00 PM - 02:30 PM" },
+        { date: nextMonthStart.clone().date(5), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(7), time: "08:00 AM - 09:30 AM" },
       ],
     },
     {
       id: 5,
       title: "Excel Full Course",
       duration: "1 Month",
-      date:
-        baseDate.clone().add(4, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(5, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(1, "month"),
+      },
       time: "10:00 AM - 11:30 AM",
       moreClasses: 5,
       link: "/upcoming_classes/5",
       schedules: [
-        {
-          date: baseDate.clone().add(4, "month").date(16),
-          time: "11:00 AM - 12:30 PM",
-        },
-        {
-          date: baseDate.clone().add(4, "month").date(17),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(4, "month").date(23),
-          time: "04:30 PM - 06:00 PM",
-        },
-        {
-          date: baseDate.clone().add(4, "month").date(29),
-          time: "06:30 AM - 08:00 AM",
-        },
-        {
-          date: baseDate.clone().add(4, "month").date(30),
-          time: "02:00 PM - 03:30 PM",
-        },
+        { date: nextMonthStart.clone().date(1), time: "11:00 AM - 12:30 PM" },
+        { date: nextMonthStart.clone().date(2), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(8), time: "04:30 PM - 06:00 PM" },
+        { date: nextMonthStart.clone().date(14), time: "06:30 AM - 08:00 AM" },
+        { date: nextMonthStart.clone().date(15), time: "02:00 PM - 03:30 PM" },
       ],
     },
     {
       id: 6,
       title: "Java Full Course",
       duration: "2 Months",
-      date:
-        baseDate.clone().add(5, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(7, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(2, "months"),
+      },
       time: "02:00 PM - 03:30 PM",
       moreClasses: 7,
       link: "/upcoming_classes/6",
       schedules: [
-        {
-          date: baseDate.clone().add(5, "month").date(18),
-          time: "02:00 PM - 03:30 PM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(19),
-          time: "09:00 AM - 10:30 AM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(21),
-          time: "11:00 AM - 12:30 PM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(23),
-          time: "03:00 PM - 04:30 PM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(25),
-          time: "07:00 PM - 08:30 PM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(27),
-          time: "10:00 AM - 11:30 AM",
-        },
-        {
-          date: baseDate.clone().add(5, "month").date(29),
-          time: "04:00 PM - 05:30 PM",
-        },
+        { date: nextMonthStart.clone().date(3), time: "02:00 PM - 03:30 PM" },
+        { date: nextMonthStart.clone().date(4), time: "09:00 AM - 10:30 AM" },
+        { date: nextMonthStart.clone().date(6), time: "11:00 AM - 12:30 PM" },
+        { date: nextMonthStart.clone().date(8), time: "03:00 PM - 04:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "07:00 PM - 08:30 PM" },
+        { date: nextMonthStart.clone().date(12), time: "10:00 AM - 11:30 AM" },
+        { date: nextMonthStart.clone().date(14), time: "04:00 PM - 05:30 PM" },
       ],
     },
     {
       id: 7,
       title: "MERN Stack Web Development",
       duration: "8 Months",
-      date:
-        baseDate.clone().add(6, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(14, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(8, "months"),
+      },
       time: "06:00 PM - 07:30 PM",
       moreClasses: 5,
       link: "/upcoming_classes/7",
       schedules: [
-        {
-          date: baseDate.clone().add(6, "month").date(19),
-          time: "06:00 PM - 07:30 PM",
-        },
-        {
-          date: baseDate.clone().add(6, "month").date(21),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(6, "month").date(23),
-          time: "01:00 PM - 02:30 PM",
-        },
-        {
-          date: baseDate.clone().add(6, "month").date(25),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(6, "month").date(27),
-          time: "09:00 AM - 10:30 AM",
-        },
+        { date: nextMonthStart.clone().date(4), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(8), time: "01:00 PM - 02:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(12), time: "09:00 AM - 10:30 AM" },
       ],
     },
     {
       id: 8,
       title: "RedHat Certified Engineer",
       duration: "2.5 Months",
-      date:
-        baseDate.clone().add(7, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(9.5, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(2.5, "months"),
+      },
       time: "04:00 PM - 05:30 PM",
       moreClasses: 8,
       link: "/upcoming_classes/8",
       schedules: [
-        {
-          date: baseDate.clone().add(7, "month").date(20),
-          time: "04:00 PM - 05:30 PM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(21),
-          time: "10:00 AM - 11:30 AM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(23),
-          time: "02:00 PM - 03:30 PM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(25),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(27),
-          time: "06:00 PM - 07:30 PM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(29),
-          time: "11:00 AM - 12:30 PM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(30),
-          time: "03:00 PM - 04:30 PM",
-        },
-        {
-          date: baseDate.clone().add(7, "month").date(30),
-          time: "07:00 PM - 08:30 PM",
-        },
+        { date: nextMonthStart.clone().date(5), time: "04:00 PM - 05:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "10:00 AM - 11:30 AM" },
+        { date: nextMonthStart.clone().date(8), time: "02:00 PM - 03:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(12), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(14), time: "11:00 AM - 12:30 PM" },
+        { date: nextMonthStart.clone().date(15), time: "03:00 PM - 04:30 PM" },
+        { date: nextMonthStart.clone().date(15), time: "07:00 PM - 08:30 PM" },
       ],
     },
     {
       id: 9,
       title: "Social Media Marketing",
       duration: "8 Months",
-      date:
-        baseDate.clone().add(8, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(16, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(8, "months"),
+      },
       time: "06:00 PM - 07:30 PM",
       moreClasses: 5,
       link: "/upcoming_classes/9",
       schedules: [
-        {
-          date: baseDate.clone().add(8, "month").date(19),
-          time: "06:00 PM - 07:30 PM",
-        },
-        {
-          date: baseDate.clone().add(8, "month").date(21),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(8, "month").date(23),
-          time: "01:00 PM - 02:30 PM",
-        },
-        {
-          date: baseDate.clone().add(8, "month").date(25),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(8, "month").date(27),
-          time: "09:00 AM - 10:30 AM",
-        },
+        { date: nextMonthStart.clone().date(4), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(8), time: "01:00 PM - 02:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(12), time: "09:00 AM - 10:30 AM" },
       ],
     },
     {
       id: 10,
       title: "SPSS Full Course",
       duration: "8 Months",
-      date:
-        baseDate.clone().add(9, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(17, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(8, "months"),
+      },
       time: "06:00 PM - 07:30 PM",
       moreClasses: 5,
       link: "/upcoming_classes/10",
       schedules: [
-        {
-          date: baseDate.clone().add(9, "month").date(19),
-          time: "06:00 PM - 07:30 PM",
-        },
-        {
-          date: baseDate.clone().add(9, "month").date(21),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(9, "month").date(23),
-          time: "01:00 PM - 02:30 PM",
-        },
-        {
-          date: baseDate.clone().add(9, "month").date(25),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(9, "month").date(27),
-          time: "09:00 AM - 10:30 AM",
-        },
+        { date: nextMonthStart.clone().date(4), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(8), time: "01:00 PM - 02:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(12), time: "09:00 AM - 10:30 AM" },
       ],
     },
     {
       id: 11,
       title: "Tally",
       duration: "8 Months",
-      date:
-        baseDate.clone().add(10, "month").format("MMMM D, YYYY") +
-        " - " +
-        baseDate.clone().add(18, "month").format("MMMM D, YYYY"),
+      date: {
+        start: nextMonthStart.clone(),
+        end: nextMonthStart.clone().add(8, "months"),
+      },
       time: "06:00 PM - 07:30 PM",
       moreClasses: 5,
       link: "/upcoming_classes/11",
       schedules: [
-        {
-          date: baseDate.clone().add(10, "month").date(19),
-          time: "06:00 PM - 07:30 PM",
-        },
-        {
-          date: baseDate.clone().add(10, "month").date(21),
-          time: "08:00 AM - 09:30 AM",
-        },
-        {
-          date: baseDate.clone().add(10, "month").date(23),
-          time: "01:00 PM - 02:30 PM",
-        },
-        {
-          date: baseDate.clone().add(10, "month").date(25),
-          time: "05:00 PM - 06:30 PM",
-        },
-        {
-          date: baseDate.clone().add(10, "month").date(27),
-          time: "09:00 AM - 10:30 AM",
-        },
+        { date: nextMonthStart.clone().date(4), time: "06:00 PM - 07:30 PM" },
+        { date: nextMonthStart.clone().date(6), time: "08:00 AM - 09:30 AM" },
+        { date: nextMonthStart.clone().date(8), time: "01:00 PM - 02:30 PM" },
+        { date: nextMonthStart.clone().date(10), time: "05:00 PM - 06:30 PM" },
+        { date: nextMonthStart.clone().date(12), time: "09:00 AM - 10:30 AM" },
       ],
     },
   ];
@@ -398,11 +240,23 @@ const upcomingClassesData = generateUpcomingClassesData();
 
 // Format the schedule dates for display
 const formatSchedules = (schedules) => {
-  return schedules.map((schedule) => ({
-    ...schedule,
-    displayDate: `${schedule.date.date()} ${schedule.date.format("MMM")}`,
-    fullDate: schedule.date.format("YYYY-MM-DD"),
-  }));
+  return schedules.map((schedule) => {
+    // Check if date is a moment object
+    if (moment.isMoment(schedule.date)) {
+      return {
+        ...schedule,
+        displayDate: schedule.date.format("MMMM D, YYYY"),
+        fullDate: schedule.date.format("YYYY-MM-DD"),
+      };
+    }
+    
+    // If it's already a string or other format, return as is
+    return {
+      ...schedule,
+      displayDate: schedule.date || "Invalid date",
+      fullDate: "",
+    };
+  });
 };
 
 upcomingClassesData.forEach((course) => {
@@ -1086,7 +940,7 @@ export default function CourseDetails() {
   };
 
   const upcomingClasses = course.schedules.map((schedule) => ({
-    date: `${schedule.date} ${schedule.month} 2025`,
+    date: schedule.displayDate,
     times: [schedule.time],
   }));
 

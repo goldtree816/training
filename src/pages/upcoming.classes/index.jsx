@@ -18,198 +18,243 @@ import SocialMarketing from "../../assets/courses/Social-Marketing-Img.png";
 import SPSS from "../../assets/courses/SPSS-Img.png";
 import Tally from "../../assets/courses/Tally-Img.png";
 
-const upcomingClassesData = [
-  {
-    id: 1,
-    title: "Full Accounting Course",
-    duration: "6 Month",
-    image: FullAccounting,
-    date: moment("15 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "08:00 PM - 09:30 PM",
-    moreClasses: 5,
-    link: "/upcoming_classes/1",
-    schedules: [
-      { date: 15, month: "Jun", time: "08:00 PM - 09:30 PM" },
-      { date: 16, month: "Jun", time: "09:00 AM - 10:30 AM" },
-      { date: 17, month: "Jun", time: "02:00 PM - 03:30 PM" },
-      { date: 18, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 19, month: "Jun", time: "10:00 AM - 11:30 AM" },
-    ],
-  },
-  {
-    id: 2,
-    title: "AWS Full Course",
-    duration: "1 Month",
-    image: AWS,
-    date: moment("16 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "07:00 AM - 08:30 AM",
-    moreClasses: 3,
-    link: "/upcoming_classes/2",
-    schedules: [
-      { date: 16, month: "Jun", time: "07:00 AM - 08:30 AM" },
-      { date: 18, month: "Jun", time: "03:00 PM - 04:30 PM" },
-      { date: 20, month: "Jun", time: "11:00 AM - 12:30 PM" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Advanced Cybersecurity Course",
-    duration: "2.5 Months",
-    image: CyberSecurity,
-    date: moment("16 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "08:00 AM - 09:30 AM",
-    moreClasses: 6,
-    link: "/upcoming_classes/3",
-    schedules: [
-      { date: 16, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 17, month: "Jun", time: "10:00 AM - 11:30 AM" },
-      { date: 19, month: "Jun", time: "02:00 PM - 03:30 PM" },
-      { date: 21, month: "Jun", time: "04:00 PM - 05:30 PM" },
-      { date: 23, month: "Jun", time: "09:00 AM - 10:30 AM" },
-      { date: 25, month: "Jun", time: "06:00 PM - 07:30 PM" },
-    ],
-  },
-  {
-    id: 4,
-    title: "Digital Marketing Full Course",
-    duration: "3 Months",
-    image: DigitalImage,
-    date: moment("16 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "09:30 AM - 11:00 AM",
-    moreClasses: 4,
-    link: "/upcoming_classes/4",
-    schedules: [
-      { date: 16, month: "Jun", time: "09:30 AM - 11:00 AM" },
-      { date: 18, month: "Jun", time: "01:00 PM - 02:30 PM" },
-      { date: 20, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 22, month: "Jun", time: "08:00 AM - 09:30 AM" },
-    ],
-  },
-  {
-    id: 5,
-    title: "Excel Full Course",
-    duration: "1 Month",
-    image: ExcelImage,
-    date: moment("17 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "10:00 AM - 11:30 AM",
-    moreClasses: 5,
-    link: "/upcoming_classes/5",
-    schedules: [
-      { date: 16, month: "Jun", time: "11:00 AM - 12:30 PM" },
-      { date: 17, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 23, month: "Jun", time: "04:30 PM - 06:00 PM" },
-      { date: 29, month: "Jun", time: "06:30 AM - 08:00 AM" },
-      { date: 30, month: "Jun", time: "02:00 PM - 03:30 PM" },
-    ],
-  },
-  {
-    id: 6,
-    title: "Java Full Course",
-    duration: "2 Months",
-    image: Java,
-    date: moment("15 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "02:00 PM - 03:30 PM",
-    moreClasses: 7,
-    link: "/upcoming_classes/6",
-    schedules: [
-      { date: 18, month: "Jun", time: "02:00 PM - 03:30 PM" },
-      { date: 19, month: "Jun", time: "09:00 AM - 10:30 AM" },
-      { date: 21, month: "Jun", time: "11:00 AM - 12:30 PM" },
-      { date: 23, month: "Jun", time: "03:00 PM - 04:30 PM" },
-      { date: 25, month: "Jun", time: "07:00 PM - 08:30 PM" },
-      { date: 27, month: "Jun", time: "10:00 AM - 11:30 AM" },
-      { date: 29, month: "Jun", time: "04:00 PM - 05:30 PM" },
-    ],
-  },
-  {
-    id: 7,
-    title: "MERN Stack Web Development",
-    duration: "8 Months",
-    image: MERN,
-    date: moment("15 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "06:00 PM - 07:30 PM",
-    moreClasses: 5,
-    link: "/upcoming_classes/7",
-    schedules: [
-      { date: 19, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 21, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 23, month: "Jun", time: "01:00 PM - 02:30 PM" },
-      { date: 25, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 27, month: "Jun", time: "09:00 AM - 10:30 AM" },
-    ],
-  },
-  {
-    id: 8,
-    title: "RedHat Certified Engineer",
-    duration: "2.5 Months",
-    image: RedHatImage,
-    date: moment("20 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "04:00 PM - 05:30 PM",
-    moreClasses: 8,
-    link: "/upcoming_classes/8",
-    schedules: [
-      { date: 20, month: "Jun", time: "04:00 PM - 05:30 PM" },
-      { date: 21, month: "Jun", time: "10:00 AM - 11:30 AM" },
-      { date: 23, month: "Jun", time: "02:00 PM - 03:30 PM" },
-      { date: 25, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 27, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 29, month: "Jun", time: "11:00 AM - 12:30 PM" },
-      { date: 30, month: "Jun", time: "03:00 PM - 04:30 PM" },
-      { date: 30, month: "Jun", time: "07:00 PM - 08:30 PM" },
-    ],
-  },
-  {
-    id: 9,
-    title: "Social Media Marketing",
-    duration: "8 Months",
-    image: SocialMarketing,
-    date: moment("19 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "06:00 PM - 07:30 PM",
-    moreClasses: 5,
-    link: "/upcoming_classes/9",
-    schedules: [
-      { date: 19, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 21, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 23, month: "Jun", time: "01:00 PM - 02:30 PM" },
-      { date: 25, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 27, month: "Jun", time: "09:00 AM - 10:30 AM" },
-    ],
-  },
-  {
-    id: 10,
-    title: "SPSS Full Course",
-    duration: "8 Months",
-    image: SPSS,
-    date: moment("15 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "06:00 PM - 07:30 PM",
-    moreClasses: 5,
-    link: "/upcoming_classes/10",
-    schedules: [
-      { date: 19, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 21, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 23, month: "Jun", time: "01:00 PM - 02:30 PM" },
-      { date: 25, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 27, month: "Jun", time: "09:00 AM - 10:30 AM" },
-    ],
-  },
-  {
-    id: 11,
-    title: "Tally",
-    duration: "8 Months",
-    image: Tally,
-    date: moment("15 Jun 2025", "DD MMM YYYY").format("MMMM D, YYYY"),
-    time: "06:00 PM - 07:30 PM",
-    moreClasses: 5,
-    link: "/upcoming_classes/11",
-    schedules: [
-      { date: 19, month: "Jun", time: "06:00 PM - 07:30 PM" },
-      { date: 21, month: "Jun", time: "08:00 AM - 09:30 AM" },
-      { date: 23, month: "Jun", time: "01:00 PM - 02:30 PM" },
-      { date: 25, month: "Jun", time: "05:00 PM - 06:30 PM" },
-      { date: 27, month: "Jun", time: "09:00 AM - 10:30 AM" },
-    ],
-  },
-];
+// Generate the upcoming classes data with dynamic dates
+const generateUpcomingClassesData = () => {
+  // Get the current date and last day of the current month
+  const currentDate = moment();
+  const lastDayOfMonth = moment().endOf('month');
+  
+  // Check if today is the last day of the month
+  const isLastDay = currentDate.isSame(lastDayOfMonth, 'day');
+  
+  // Set nextMonthStart to the start of the next month if today is the last day, otherwise use the current month
+  const nextMonthStart = isLastDay ? moment().add(1, 'month').startOf('month') : moment().startOf('month');
+
+  // Array of base days and times for each course
+  const courseSchedules = [
+    {
+      id: 1,
+      title: "Full Accounting Course",
+      duration: "6 Month",
+      image: FullAccounting,
+      baseDay: 15,
+      time: "08:00 PM - 09:30 PM",
+      moreClasses: 5,
+      link: "/upcoming_classes/1",
+      scheduleDays: [15, 16, 17, 18, 19],
+      scheduleTimes: [
+        "08:00 PM - 09:30 PM",
+        "09:00 AM - 10:30 AM",
+        "02:00 PM - 03:30 PM",
+        "06:00 PM - 07:30 PM",
+        "10:00 AM - 11:30 AM",
+      ],
+    },
+    {
+      id: 2,
+      title: "AWS Full Course",
+      duration: "1 Month",
+      image: AWS,
+      baseDay: 16,
+      time: "07:00 AM - 08:30 AM",
+      moreClasses: 3,
+      link: "/upcoming_classes/2",
+      scheduleDays: [16, 18, 20],
+      scheduleTimes: [
+        "07:00 AM - 08:30 AM",
+        "03:00 PM - 04:30 PM",
+        "11:00 AM - 12:30 PM",
+      ],
+    },
+    {
+      id: 3,
+      title: "Advanced Cybersecurity Course",
+      duration: "2.5 Months",
+      image: CyberSecurity,
+      baseDay: 16,
+      time: "08:00 AM - 09:30 AM",
+      moreClasses: 6,
+      link: "/upcoming_classes/3",
+      scheduleDays: [16, 17, 19, 21, 23, 25],
+      scheduleTimes: [
+        "08:00 AM - 09:30 AM",
+        "10:00 AM - 11:30 AM",
+        "02:00 PM - 03:30 PM",
+        "04:00 PM - 05:30 PM",
+        "09:00 AM - 10:30 AM",
+        "06:00 PM - 07:30 PM",
+      ],
+    },
+    {
+      id: 4,
+      title: "Digital Marketing Full Course",
+      duration: "3 Months",
+      image: DigitalImage,
+      baseDay: 16,
+      time: "09:30 AM - 11:00 AM",
+      moreClasses: 4,
+      link: "/upcoming_classes/4",
+      scheduleDays: [16, 18, 20, 22],
+      scheduleTimes: [
+        "09:30 AM - 11:00 AM",
+        "01:00 PM - 02:30 PM",
+        "05:00 PM - 06:30 PM",
+        "08:00 AM - 09:30 AM",
+      ],
+    },
+    {
+      id: 5,
+      title: "Excel Full Course",
+      duration: "1 Month",
+      image: ExcelImage,
+      baseDay: 17,
+      time: "10:00 AM - 11:30 AM",
+      moreClasses: 5,
+      link: "/upcoming_classes/5",
+      scheduleDays: [16, 17, 23, 29, 30],
+      scheduleTimes: [
+        "11:00 AM - 12:30 PM",
+        "05:00 PM - 06:30 PM",
+        "04:30 PM - 06:00 PM",
+        "06:30 AM - 08:00 AM",
+        "02:00 PM - 03:30 PM",
+      ],
+    },
+    {
+      id: 6,
+      title: "Java Full Course",
+      duration: "2 Months",
+      image: Java,
+      baseDay: 15,
+      time: "02:00 PM - 03:30 PM",
+      moreClasses: 7,
+      link: "/upcoming_classes/6",
+      scheduleDays: [18, 19, 21, 23, 25, 27, 29],
+      scheduleTimes: [
+        "02:00 PM - 03:30 PM",
+        "09:00 AM - 10:30 AM",
+        "11:00 AM - 12:30 PM",
+        "03:00 PM - 04:30 PM",
+        "07:00 PM - 08:30 PM",
+        "10:00 AM - 11:30 AM",
+        "04:00 PM - 05:30 PM",
+      ],
+    },
+    {
+      id: 7,
+      title: "MERN Stack Web Development",
+      duration: "8 Months",
+      image: MERN,
+      baseDay: 15,
+      time: "06:00 PM - 07:30 PM",
+      moreClasses: 5,
+      link: "/upcoming_classes/7",
+      scheduleDays: [19, 21, 23, 25, 27],
+      scheduleTimes: [
+        "06:00 PM - 07:30 PM",
+        "08:00 AM - 09:30 AM",
+        "01:00 PM - 02:30 PM",
+        "05:00 PM - 06:30 PM",
+        "09:00 AM - 10:30 AM",
+      ],
+    },
+    {
+      id: 8,
+      title: "RedHat Certified Engineer",
+      duration: "2.5 Months",
+      image: RedHatImage,
+      baseDay: 20,
+      time: "04:00 PM - 05:30 PM",
+      moreClasses: 8,
+      link: "/upcoming_classes/8",
+      scheduleDays: [20, 21, 23, 25, 27, 29, 30, 30],
+      scheduleTimes: [
+        "04:00 PM - 05:30 PM",
+        "10:00 AM - 11:30 AM",
+        "02:00 PM - 03:30 PM",
+        "08:00 AM - 09:30 AM",
+        "06:00 PM - 07:30 PM",
+        "11:00 AM - 12:30 PM",
+        "03:00 PM - 04:30 PM",
+        "07:00 PM - 08:30 PM",
+      ],
+    },
+    {
+      id: 9,
+      title: "Social Media Marketing",
+      duration: "8 Months",
+      image: SocialMarketing,
+      baseDay: 19,
+      time: "06:00 PM - 07:30 PM",
+      moreClasses: 5,
+      link: "/upcoming_classes/9",
+      scheduleDays: [19, 21, 23, 25, 27],
+      scheduleTimes: [
+        "06:00 PM - 07:30 PM",
+        "08:00 AM - 09:30 AM",
+        "01:00 PM - 02:30 PM",
+        "05:00 PM - 06:30 PM",
+        "09:00 AM - 10:30 AM",
+      ],
+    },
+    {
+      id: 10,
+      title: "SPSS Full Course",
+      duration: "8 Months",
+      image: SPSS,
+      baseDay: 15,
+      time: "06:00 PM - 07:30 PM",
+      moreClasses: 5,
+      link: "/upcoming_classes/10",
+      scheduleDays: [19, 21, 23, 25, 27],
+      scheduleTimes: [
+        "06:00 PM - 07:30 PM",
+        "08:00 AM - 09:30 AM",
+        "01:00 PM - 02:30 PM",
+        "05:00 PM - 06:30 PM",
+        "09:00 AM - 10:30 AM",
+      ],
+    },
+    {
+      id: 11,
+      title: "Tally",
+      duration: "8 Months",
+      image: Tally,
+      baseDay: 15,
+      time: "06:00 PM - 07:30 PM",
+      moreClasses: 5,
+      link: "/upcoming_classes/11",
+      scheduleDays: [19, 21, 23, 25, 27],
+      scheduleTimes: [
+        "06:00 PM - 07:30 PM",
+        "08:00 AM - 09:30 AM",
+        "01:00 PM - 02:30 PM",
+        "05:00 PM - 06:30 PM",
+        "09:00 AM - 10:30 AM",
+      ],
+    },
+  ];
+
+  return courseSchedules.map((course) => {
+    // Generate the main course date using the base day
+    const courseDate = nextMonthStart.clone().date(course.baseDay);
+    
+    // Generate schedules with dynamic dates and month
+    const schedules = course.scheduleDays.map((day, index) => ({
+      date: day,
+      month: nextMonthStart.format("MMM"),
+      time: course.scheduleTimes[index],
+    }));
+
+    return {
+      ...course,
+      date: courseDate.format("MMMM D, YYYY"),
+      schedules,
+    };
+  });
+};
+
+const upcomingClassesData = generateUpcomingClassesData();
 
 export default function UpcomingClasses() {
   const [selectedCourse, setSelectedCourse] = useState(null);
@@ -226,10 +271,10 @@ export default function UpcomingClasses() {
     setSelectedCourse(null);
   };
 
- const goToCardLink = (course) => {
-  console.log("Navigating to:", course.link);
-  navigate(course.link);
-};
+  const goToCardLink = (course) => {
+    console.log("Navigating to:", course.link);
+    navigate(course.link);
+  };
 
   return (
     <>
